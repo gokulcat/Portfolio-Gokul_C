@@ -37,10 +37,10 @@ export const Footer: React.FC = () => {
           <div className={`flex flex-wrap items-center justify-center gap-6 text-xs font-medium ${
             isDark ? 'text-slate-400' : 'text-slate-700'
           }`}>
+            <a href="#projects" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E] font-semibold'}`}>Works</a>
             <a href="#about" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E] font-semibold'}`}>About</a>
-            <a href="#projects" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E] font-semibold'}`}>Projects</a>
             <a href="#skills" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E] font-semibold'}`}>Skills</a>
-            <a href="#experience" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E] font-semibold'}`}>Experience</a>
+            <a href="#careers" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E] font-semibold'}`}>Careers</a>
             <a href="#css-lab" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E] font-semibold'}`}>CSS Lab</a>
             <a href="#contact" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E] font-semibold'}`}>Contact</a>
           </div>

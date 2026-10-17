@@ -47,13 +47,13 @@ function PortfolioApp() {
           onSelectProject={(project) => setSelectedProject(project)}
         />
 
-        {/* Skills & Technical Architecture */}
-        <SkillsSection />
-
         {/* About & Collaboration Philosophy */}
         <AboutSection
           onOpenResume={() => setResumeOpen(true)}
         />
+
+        {/* Skills & Technical Architecture */}
+        <SkillsSection />
 
         {/* Career Milestone Timeline */}
         <ExperienceTimeline />

@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgMint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#051713"/>
+      <stop offset="50%" stop-color="#0A221C"/>
+      <stop offset="100%" stop-color="#03100D"/>
+    </linearGradient>
+    <linearGradient id="accentMint" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#85F8C4"/>
+    </linearGradient>
+    <linearGradient id="goldVault" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="cardMint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E2D25" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#081E19" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="shadowMint" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgMint)"/>
+
+  <!-- Subtle Financial Grid -->
+  <g opacity="0.05" stroke="#10B981" stroke-width="1">
+    <line x1="0" y1="75" x2="1200" y2="75"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="225" x2="1200" y2="225"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="375" x2="1200" y2="375"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="150" y1="0" x2="150" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="450" y1="0" x2="450" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="750" y1="0" x2="750" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+    <line x1="1050" y1="0" x2="1050" y2="675"/>
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="1000" cy="200" r="300" fill="#10B981" opacity="0.1" filter="blur(60px)"/>
+  <circle cx="200" cy="450" r="260" fill="#059669" opacity="0.08" filter="blur(50px)"/>
+
+  <!-- Main FinTech Window Frame -->
+  <g filter="url(#shadowMint)">
+    <rect x="60" y="45" width="1080" height="585" rx="16" fill="#081915" stroke="#133E32" stroke-width="1.5"/>
+
+    <!-- Window Top Header Bar -->
+    <rect x="60" y="45" width="1080" height="50" rx="16" fill="#0C241E"/>
+    <rect x="60" y="79" width="1080" height="16" fill="#0C241E"/>
+    <line x1="60" y1="95" x2="1140" y2="95" stroke="#133E32" stroke-width="1"/>
+
+    <!-- Traffic Lights -->
+    <circle cx="92" cy="70" r="6" fill="#EF4444"/>
+    <circle cx="112" cy="70" r="6" fill="#F59E0B"/>
+    <circle cx="132" cy="70" r="6" fill="#10B981"/>
+
+    <!-- App Title in Header -->
+    <g transform="translate(165, 58)">
+      <rect x="0" y="0" width="24" height="24" rx="6" fill="#10B981"/>
+      <text x="6" y="17" fill="#002114" font-family="monospace" font-size="14" font-weight="900">₮</text>
+      <text x="34" y="17" fill="#F0FDF4" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">Wealthora / MintVault</text>
+      <text x="188" y="17" fill="#6EE7B7" font-family="monospace" font-size="12">· Smart Salary Splitter</text>
+    </g>
+
+    <!-- Currency Selector in Header -->
+    <rect x="740" y="58" width="180" height="25" rx="6" fill="#11332A" stroke="#1D5344" stroke-width="1"/>
+    <text x="755" y="74" fill="#85F8C4" font-family="monospace" font-size="11" font-weight="700">USD $</text>
+    <text x="798" y="74" fill="#6EE7B7" font-family="monospace" font-size="11">EUR €</text>
+    <text x="842" y="74" fill="#6EE7B7" font-family="monospace" font-size="11">GBP £</text>
+    <text x="886" y="74" fill="#6EE7B7" font-family="monospace" font-size="11">INR ₹</text>
+
+    <!-- Header Live Status Badge -->
+    <rect x="940" y="58" width="180" height="25" rx="6" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-opacity="0.3"/>
+    <circle cx="956" cy="70" r="3.5" fill="#10B981"/>
+    <text x="968" y="75" fill="#85F8C4" font-family="monospace" font-size="11" font-weight="600">8.4% APY COMPOUNDING</text>
+
+    <!-- Upper Salary Splitter Control Panel -->
+    <g transform="translate(90, 115)">
+      <rect x="0" y="0" width="1020" height="120" rx="12" fill="url(#cardMint)" stroke="#164E3F" stroke-width="1"/>
+
+      <text x="30" y="36" fill="#85F8C4" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1">AUTONOMOUS SALARY ALLOCATION ENGINE</text>
+      <text x="30" y="76" fill="#FFFFFF" font-family="-apple-system, sans-serif" font-size="34" font-weight="800">$8,500<tspan font-size="18" fill="#6EE7B7" font-weight="500"> / month net income</tspan></text>
+      <text x="30" y="100" fill="#A7F3D0" font-family="-apple-system, sans-serif" font-size="12">Split across 50/30/20 algorithmic rules + high-yield compounding vault</text>
+
+      <!-- Distribution Bars -->
+      <g transform="translate(620, 25)">
+        <text x="0" y="18" fill="#E2E8F0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600">50% Needs ($4,250)</text>
+        <rect x="0" y="26" width="370" height="8" rx="4" fill="#133E32"/>
+        <rect x="0" y="26" width="185" height="8" rx="4" fill="#3B82F6"/>
+
+        <text x="0" y="52" fill="#E2E8F0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600">30% Wants &amp; Lifestyle ($2,550)</text>
+        <rect x="0" y="60" width="370" height="8" rx="4" fill="#133E32"/>
+        <rect x="0" y="60" width="111" height="8" rx="4" fill="#F59E0B"/>
+
+        <text x="0" y="86" fill="#E2E8F0" font-family="-apple-system, sans-serif" font-size="12" font-weight="600">20% High-Yield Vault ($1,700)</text>
+        <rect x="0" y="94" width="370" height="8" rx="4" fill="#133E32"/>
+        <rect x="0" y="94" width="74" height="8" rx="4" fill="#10B981"/>
+      </g>
+    </g>
+
+    <!-- 3 Vault Cards -->
+    <g transform="translate(90, 255)">
+      <!-- Card 1: Emergency Vault -->
+      <rect x="0" y="0" width="320" height="180" rx="12" fill="#0A231C" stroke="#164E3F" stroke-width="1"/>
+      <rect x="20" y="20" width="36" height="36" rx="8" fill="#3B82F6" fill-opacity="0.2"/>
+      <text x="31" y="44" fill="#60A5FA" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">🛡</text>
+      <text x="68" y="34" fill="#FFFFFF" font-family="-apple-system, sans-serif" font-size="15" font-weight="700">Essential Sinking Fund</text>
+      <text x="68" y="50" fill="#94A3B8" font-family="monospace" font-size="11">6 Months Reserve</text>
+      
+      <text x="20" y="98" fill="#FFFFFF" font-family="-apple-system, sans-serif" font-size="26" font-weight="800">$25,500</text>
+      <text x="20" y="118" fill="#60A5FA" font-family="monospace" font-size="11">100% Fully Funded Target</text>
+
+      <rect x="20" y="136" width="280" height="6" rx="3" fill="#133E32"/>
+      <rect x="20" y="136" width="280" height="6" rx="3" fill="#3B82F6"/>
+      <text x="20" y="160" fill="#6EE7B7" font-family="monospace" font-size="10">Auto-transfers enabled (1st of month)</text>
+
+      <!-- Card 2: Compounding High-Yield Vault -->
+      <rect x="350" y="0" width="320" height="180" rx="12" fill="#0C2E24" stroke="#10B981" stroke-width="1.5"/>
+      <rect x="370" y="20" width="36" height="36" rx="8" fill="#10B981" fill-opacity="0.25"/>
+      <text x="381" y="44" fill="#85F8C4" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">📈</text>
+      <text x="418" y="34" fill="#FFFFFF" font-family="-apple-system, sans-serif" font-size="15" font-weight="700">Mint High-Yield Vault</text>
+      <text x="418" y="50" fill="#85F8C4" font-family="monospace" font-size="11">8.42% Compounding APY</text>
+
+      <text x="370" y="98" fill="#85F8C4" font-family="-apple-system, sans-serif" font-size="26" font-weight="800">$64,820</text>
+      <text x="370" y="118" fill="#34D399" font-family="monospace" font-size="11">+ $4,810 Compounded Interest Earned</text>
+
+      <rect x="370" y="136" width="280" height="6" rx="3" fill="#133E32"/>
+      <rect x="370" y="136" width="210" height="6" rx="3" fill="#10B981"/>
+      <text x="370" y="160" fill="#85F8C4" font-family="monospace" font-size="10">Projected $100K: 14 Months</text>
+
+      <!-- Card 3: Goals & Freedom Fund -->
+      <rect x="700" y="0" width="320" height="180" rx="12" fill="#0A231C" stroke="#164E3F" stroke-width="1"/>
+      <rect x="720" y="20" width="36" height="36" rx="8" fill="#F59E0B" fill-opacity="0.2"/>
+      <text x="731" y="44" fill="#FBBF24" font-family="-apple-system, sans-serif" font-size="18" font-weight="700">🎯</text>
+      <text x="768" y="34" fill="#FFFFFF" font-family="-apple-system, sans-serif" font-size="15" font-weight="700">Growth Sinking Funds</text>
+      <text x="768" y="50" fill="#94A3B8" font-family="monospace" font-size="11">Tech Gear &amp; Real Estate</text>
+
+      <text x="720" y="98" fill="#FFFFFF" font-family="-apple-system, sans-serif" font-size="26" font-weight="800">$18,400</text>
+      <text x="720" y="118" fill="#FBBF24" font-family="monospace" font-size="11">76% of $24,000 Milestone</text>
+
+      <rect x="720" y="136" width="280" height="6" rx="3" fill="#133E32"/>
+      <rect x="720" y="136" width="212" height="6" rx="3" fill="#F59E0B"/>
+      <text x="720" y="160" fill="#6EE7B7" font-family="monospace" font-size="10">Monthly contribution: +$850</text>
+    </g>
+
+    <!-- Bottom FX and Analytics Strip -->
+    <g transform="translate(90, 455)">
+      <rect x="0" y="0" width="1020" height="100" rx="12" fill="#061713" stroke="#133E32" stroke-width="1"/>
+      
+      <text x="24" y="32" fill="#E2E8F0" font-family="-apple-system, sans-serif" font-size="13" font-weight="700">FX Route Matrix &amp; Multi-Currency Split</text>
+      <text x="24" y="54" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="12">Real-time interbank rates with zero-spread automated bucket allocations</text>
+
+      <g transform="translate(24, 68)">
+        <text x="0" y="14" fill="#85F8C4" font-family="monospace" font-size="11">USD/EUR 0.924</text>
+        <text x="140" y="14" fill="#85F8C4" font-family="monospace" font-size="11">USD/GBP 0.791</text>
+        <text x="280" y="14" fill="#85F8C4" font-family="monospace" font-size="11">USD/INR 86.42</text>
+      </g>
+
+      <!-- Live Interactive Badge -->
+      <rect x="800" y="32" width="190" height="38" rx="8" fill="#10B981" fill-opacity="0.2" stroke="#10B981" stroke-width="1"/>
+      <text x="825" y="56" fill="#85F8C4" font-family="-apple-system, sans-serif" font-size="12" font-weight="700">Open Live Application →</text>
+    </g>
+
+    <!-- Footer Bar -->
+    <rect x="60" y="570" width="1080" height="28" rx="0" fill="#040F0C"/>
+    <line x1="60" y1="570" x2="1140" y2="570" stroke="#133E32" stroke-width="1"/>
+    <text x="82" y="589" fill="#4E7C70" font-family="monospace" font-size="11">Autonomous Wealth Engine v1.8 · Built with React &amp; TypeScript · mint-vault-omega.vercel.app</text>
+  </g>
+</svg>

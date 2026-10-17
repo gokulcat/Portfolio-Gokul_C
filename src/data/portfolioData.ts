@@ -43,7 +43,7 @@ export const PORTFOLIO_DATA = {
     collaborationQuote: "Collaboration is at the heart of my workflow—whether it’s working closely with designers or ensuring proper design-to-code handoffs.",
     stats: [
       { label: "Experience", value: "4.5+ Years", detail: "Frontend Engineering" },
-      { label: "Core Projects", value: "3 Featured", detail: "Full Case Studies" },
+      { label: "Core Projects", value: "5 Featured", detail: "Full Case Studies" },
       { label: "Design Fidelity", value: "100%", detail: "Pixel-perfect Figma to Code" },
       { label: "Specialization", value: "React & Angular", detail: "Expanding to Full-Stack" }
     ],
@@ -58,33 +58,64 @@ export const PORTFOLIO_DATA = {
 
   projects: [
     {
-      id: "portfolio-v1",
-      title: "Developer Portfolio & Personal Brand",
-      shortTitle: "Personal Portfolio",
+      id: "developers-app",
+      title: "DevHub — Developer Environment Studio & Tool Store",
+      shortTitle: "DevHub Developer Studio",
       category: "Web Application",
-      subtitle: "Portfolio about ME !",
-      overview: "Welcome to my portfolio! This space is a reflection of my journey as a Full Stack Developer and my passion for creating innovative, user-focused web applications. A Centralized Hub for My Professional Journey! The portfolio project serves as a dynamic, interactive space that highlights my professional growth, key achievements, and technical expertise.",
-      extendedOverview: "It’s a digital representation of who I am as a developer, detailing my career journey and creative pursuits. Designed with clean semantic markup, custom styling abstractions, responsive media queries, and streamlined user navigation across devices.",
-      image: "/assets/project_1.png",
-      liveUrl: "https://gokulportfolio28.netlify.app",
-      codeUrl: "https://github.com/gokulcat/Portfolio",
-      tools: ["HTML", "CSS", "JavaScript", "React", "SCSS", "GIT"],
-      role: "Lead Frontend Architect",
-      timeline: "Continuous Iteration",
+      subtitle: "Keyboard-First Developer Workspace & Tool Ecosystem !",
+      overview: "DevHub is a high-performance developer workspace platform built for isolated runtime orchestration, automated environment scaffolding, package matrices, and containerized dev daemons with a keyboard-first command interface.",
+      extendedOverview: "Engineered to eliminate friction in modern development setups, DevHub unifies workspace scaffolding, dependency matrix auditing, container runtime management, and community tool extensions into an ultra-fast, responsive dashboard. Features instant command palette navigation (⌘K), real-time process monitoring, and seamless terminal integrations.",
+      image: "/assets/project_developers_app.svg",
+      liveUrl: "https://developers-app-pied.vercel.app/",
+      codeUrl: "https://github.com/gokulcat/Developers-App",
+      tools: ["React 19", "TypeScript", "Tailwind CSS", "Motion", "Express", "Vite"],
+      role: "Lead Full-Stack Frontend Engineer",
+      timeline: "Production Delivery",
       keyAchievements: [
-        "100% responsive cross-device layout tested across desktop, tablet, and mobile",
-        "Dynamic modular component hierarchy with SCSS design variables",
-        "Sub-second initial paint speed and optimized bundle loading",
-        "Clean interactive case study presentation and resume integration"
+        "Keyboard-driven ⌘K command palette supporting fuzzy search across tools, scripts, and runtime daemons",
+        "Interactive package matrix auditor with visual dependency vulnerability flags and version resolution",
+        "Containerized environment manager supporting isolated runtime profiles with live CPU/memory telemetry",
+        "Sub-50ms reactive UI state transitions using React 19 concurrent features and fluid motion primitives"
       ],
       challengesAndSolutions: [
         {
-          challenge: "Creating a distinct visual identity that balances technical depth with aesthetic polish.",
-          solution: "Established a custom SCSS architecture with consistent typography scales, reusable button and section primitives, and subtle micro-interactions."
+          challenge: "Synchronizing multi-runtime daemon statuses and system metric streaming without client-side lag.",
+          solution: "Designed an event-driven telemetry stream with batched state reconciliation and memoized SVG metric charts."
         },
         {
-          challenge: "Ensuring smooth asset loading without slowing initial paint.",
-          solution: "Utilized asynchronous image loading, optimized vector icons, and lazy-loaded media assets."
+          challenge: "Building a scalable tool marketplace with modular plug-in cards and instant search filtering.",
+          solution: "Structured normalized catalog stores with client-side indexing and asynchronous module resolution."
+        }
+      ]
+    },
+    {
+      id: "mint-vault",
+      title: "Wealthora / MintVault — Smart Salary Splitter & Automated Wealth",
+      shortTitle: "MintVault FinTech",
+      category: "FinTech & Analytics",
+      subtitle: "Autonomous Multi-Currency Salary Allocation Engine !",
+      overview: "Wealthora (MintVault) is an autonomous multi-currency salary allocation platform featuring a dynamic 50/30/20 cash engine, high-yield vault compounding projections, and smart sinking funds for modern wealth building.",
+      extendedOverview: "MintVault transforms complex financial allocation into intuitive, automated workflows. Users configure their monthly paycheck streams across global currencies, instantly split earnings into essential needs, discretionary spending, and compounding high-yield vaults (8.4%+ APY), and forecast future milestones with zero friction.",
+      image: "/assets/project_mint_vault.svg",
+      liveUrl: "https://mint-vault-omega.vercel.app/",
+      codeUrl: "https://github.com/gokulcat/MintVault",
+      tools: ["React", "TypeScript", "Tailwind CSS", "Material Symbols", "Vite", "GIT"],
+      role: "Frontend Architect & UI Engineer",
+      timeline: "Production Delivery",
+      keyAchievements: [
+        "Autonomous 50/30/20 dynamic budget allocation engine with live slider distribution recalculations",
+        "Multi-currency FX routing engine supporting USD, EUR, GBP, and INR with real-time conversion rates",
+        "High-yield compound interest milestone simulator with interactive timeline visualization",
+        "Goal-oriented sinking funds tracker with target date projections and automated monthly delta calculations"
+      ],
+      challengesAndSolutions: [
+        {
+          challenge: "Handling real-time currency conversions across divergent currency fractions without rounding drift.",
+          solution: "Implemented high-precision integer-cent arithmetic routines coupled with centralized FX routing tables."
+        },
+        {
+          challenge: "Visualizing compounding curves and expense ratios across multiple simultaneous saving goals.",
+          solution: "Built custom responsive SVG telemetry dials and interactive allocation bars that smoothly interpolate state changes."
         }
       ]
     },
@@ -147,6 +178,37 @@ export const PORTFOLIO_DATA = {
         {
           challenge: "State synchronization across multiple budgeting categories and recurring projections.",
           solution: "Structured centralized state management using React hooks and pure calculation utilities for zero-lag updates."
+        }
+      ]
+    },
+    {
+      id: "portfolio-v1",
+      title: "Developer Portfolio & Personal Brand",
+      shortTitle: "Personal Portfolio",
+      category: "Web Application",
+      subtitle: "Portfolio about ME !",
+      overview: "Welcome to my portfolio! This space is a reflection of my journey as a Full Stack Developer and my passion for creating innovative, user-focused web applications. A Centralized Hub for My Professional Journey! The portfolio project serves as a dynamic, interactive space that highlights my professional growth, key achievements, and technical expertise.",
+      extendedOverview: "It’s a digital representation of who I am as a developer, detailing my career journey and creative pursuits. Designed with clean semantic markup, custom styling abstractions, responsive media queries, and streamlined user navigation across devices.",
+      image: "/assets/project_1.png",
+      liveUrl: "https://gokulportfolio28.netlify.app",
+      codeUrl: "https://github.com/gokulcat/Portfolio",
+      tools: ["HTML", "CSS", "JavaScript", "React", "SCSS", "GIT"],
+      role: "Lead Frontend Architect",
+      timeline: "Continuous Iteration",
+      keyAchievements: [
+        "100% responsive cross-device layout tested across desktop, tablet, and mobile",
+        "Dynamic modular component hierarchy with SCSS design variables",
+        "Sub-second initial paint speed and optimized bundle loading",
+        "Clean interactive case study presentation and resume integration"
+      ],
+      challengesAndSolutions: [
+        {
+          challenge: "Creating a distinct visual identity that balances technical depth with aesthetic polish.",
+          solution: "Established a custom SCSS architecture with consistent typography scales, reusable button and section primitives, and subtle micro-interactions."
+        },
+        {
+          challenge: "Ensuring smooth asset loading without slowing initial paint.",
+          solution: "Utilized asynchronous image loading, optimized vector icons, and lazy-loaded media assets."
         }
       ]
     }

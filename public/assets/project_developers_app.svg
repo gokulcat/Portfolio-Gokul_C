@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgDev" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C15"/>
+      <stop offset="50%" stop-color="#0D1322"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+    <linearGradient id="accentDev" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="cardDev" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141B2D" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0F1524" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="cardGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadowDev" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgDev)"/>
+  
+  <!-- Subtle Grid pattern -->
+  <g opacity="0.06" stroke="#818CF8" stroke-width="1">
+    <line x1="0" y1="75" x2="1200" y2="75"/>
+    <line x1="0" y1="150" x2="1200" y2="150"/>
+    <line x1="0" y1="225" x2="1200" y2="225"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="375" x2="1200" y2="375"/>
+    <line x1="0" y1="450" x2="1200" y2="450"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="150" y1="0" x2="150" y2="675"/>
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="450" y1="0" x2="450" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="750" y1="0" x2="750" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+    <line x1="1050" y1="0" x2="1050" y2="675"/>
+  </g>
+
+  <!-- Ambient Glow -->
+  <circle cx="950" cy="180" r="280" fill="#6366F1" opacity="0.12" filter="blur(60px)"/>
+  <circle cx="250" cy="500" r="240" fill="#06B6D4" opacity="0.09" filter="blur(50px)"/>
+
+  <!-- Main Window Shell -->
+  <g filter="url(#shadowDev)">
+    <rect x="60" y="45" width="1080" height="585" rx="16" fill="#0B0F19" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Window Top Header Bar -->
+    <rect x="60" y="45" width="1080" height="48" rx="16" fill="#0E1422"/>
+    <rect x="60" y="77" width="1080" height="16" fill="#0E1422"/>
+    <line x1="60" y1="93" x2="1140" y2="93" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Traffic Lights -->
+    <circle cx="92" cy="69" r="6" fill="#EF4444"/>
+    <circle cx="112" cy="69" r="6" fill="#F59E0B"/>
+    <circle cx="132" cy="69" r="6" fill="#10B981"/>
+
+    <!-- App Title in Header -->
+    <text x="165" y="74" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" letter-spacing="0.5">DevHub — Developer Environment Studio</text>
+
+    <!-- Command Palette pill in header -->
+    <rect x="520" y="57" width="360" height="26" rx="6" fill="#172033" stroke="#2B374E" stroke-width="1"/>
+    <text x="535" y="74" fill="#64748B" font-family="monospace" font-size="11">⌘K  Search tools, runtimes, daemons...</text>
+    <rect x="835" y="62" width="36" height="16" rx="4" fill="#243048"/>
+    <text x="842" y="74" fill="#94A3B8" font-family="monospace" font-size="10" font-weight="700">ESC</text>
+
+    <!-- Header Right Badges -->
+    <rect x="980" y="59" width="70" height="22" rx="11" fill="#10B981" fill-opacity="0.15" stroke="#10B981" stroke-opacity="0.3"/>
+    <circle cx="994" cy="70" r="3.5" fill="#10B981"/>
+    <text x="1005" y="74" fill="#34D399" font-family="monospace" font-size="11" font-weight="600">ONLINE</text>
+
+    <rect x="1060" y="59" width="60" height="22" rx="6" fill="#6366F1" fill-opacity="0.2"/>
+    <text x="1072" y="74" fill="#A5B4FC" font-family="monospace" font-size="11" font-weight="600">v2.4.0</text>
+
+    <!-- Left Sidebar -->
+    <rect x="60" y="94" width="220" height="496" fill="#0D1322"/>
+    <line x1="280" y1="94" x2="280" y2="590" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Sidebar Items -->
+    <!-- Active Workspace Item -->
+    <rect x="74" y="112" width="192" height="36" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <rect x="74" y="112" width="4" height="36" rx="2" fill="#6366F1"/>
+    <text x="96" y="135" fill="#FFFFFF" font-family="-apple-system, sans-serif" font-size="12" font-weight="600">Dashboard &amp; Studio</text>
+
+    <text x="96" y="178" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="12">Tool Store &amp; Plugins</text>
+    <rect x="232" y="165" width="26" height="16" rx="8" fill="#6366F1" fill-opacity="0.3"/>
+    <text x="237" y="177" fill="#C7D2FE" font-family="monospace" font-size="10">24</text>
+
+    <text x="96" y="218" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="12">Package Matrices</text>
+    <text x="96" y="258" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="12">Isolated Runtimes</text>
+    <text x="96" y="298" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="12">Activity &amp; Runs</text>
+    <text x="96" y="338" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="12">Container Daemons</text>
+
+    <line x1="74" y1="365" x2="266" y2="365" stroke="#1E293B" stroke-width="1"/>
+
+    <text x="82" y="390" fill="#64748B" font-family="monospace" font-size="10" font-weight="700">RUNNING CONTAINERS</text>
+    <circle cx="88" cy="415" r="4" fill="#10B981"/>
+    <text x="100" y="419" fill="#CBD5E1" font-family="monospace" font-size="11">node-lts:22 (3000)</text>
+
+    <circle cx="88" cy="445" r="4" fill="#10B981"/>
+    <text x="100" y="449" fill="#CBD5E1" font-family="monospace" font-size="11">postgres:16 (5432)</text>
+
+    <circle cx="88" cy="475" r="4" fill="#06B6D4"/>
+    <text x="100" y="479" fill="#CBD5E1" font-family="monospace" font-size="11">redis-cache (6379)</text>
+
+    <!-- Main Content Area -->
+    <!-- Hero Banner inside Studio -->
+    <rect x="306" y="114" width="810" height="110" rx="12" fill="url(#cardDev)" stroke="#222F49" stroke-width="1"/>
+    <rect x="306" y="114" width="810" height="110" rx="12" fill="url(#cardGlow)"/>
+
+    <text x="332" y="148" fill="#F8FAFC" font-family="-apple-system, sans-serif" font-size="20" font-weight="700">Active Workspace: Cloud-Native Microfrontends</text>
+    <text x="332" y="174" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="13">React 19 Concurrent Root · TypeScript 5.8 · Tailwind CSS v4 · Express Daemon API Proxy</text>
+    
+    <rect x="332" y="192" width="130" height="24" rx="6" fill="#6366F1"/>
+    <text x="348" y="208" fill="#FFFFFF" font-family="-apple-system, sans-serif" font-size="11" font-weight="600">+ New Scaffolding</text>
+
+    <rect x="472" y="192" width="120" height="24" rx="6" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+    <text x="488" y="208" fill="#CBD5E1" font-family="-apple-system, sans-serif" font-size="11">Import Git Repo</text>
+
+    <!-- Metrics Cards 3 Columns -->
+    <g transform="translate(306, 240)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="258" height="105" rx="10" fill="#0F1626" stroke="#1E293B" stroke-width="1"/>
+      <text x="20" y="28" fill="#64748B" font-family="monospace" font-size="11">DAEMON CPU LOAD</text>
+      <text x="20" y="64" fill="#F8FAFC" font-family="-apple-system, sans-serif" font-size="28" font-weight="700">14.2%</text>
+      <text x="20" y="88" fill="#10B981" font-family="monospace" font-size="11">✓ Nominal across 4 cores</text>
+
+      <!-- Card 2 -->
+      <rect x="276" y="0" width="258" height="105" rx="10" fill="#0F1626" stroke="#1E293B" stroke-width="1"/>
+      <text x="296" y="28" fill="#64748B" font-family="monospace" font-size="11">BUNDLE HOT-RELOAD</text>
+      <text x="296" y="64" fill="#38BDF8" font-family="-apple-system, sans-serif" font-size="28" font-weight="700">18ms</text>
+      <text x="296" y="88" fill="#38BDF8" font-family="monospace" font-size="11">⚡ Vite HMR Engine Active</text>
+
+      <!-- Card 3 -->
+      <rect x="552" y="0" width="258" height="105" rx="10" fill="#0F1626" stroke="#1E293B" stroke-width="1"/>
+      <text x="572" y="28" fill="#64748B" font-family="monospace" font-size="11">SECURITY AUDIT</text>
+      <text x="572" y="64" fill="#34D399" font-family="-apple-system, sans-serif" font-size="28" font-weight="700">0 Vulnerabilities</text>
+      <text x="572" y="88" fill="#34D399" font-family="monospace" font-size="11">🔒 148 packages verified</text>
+    </g>
+
+    <!-- Active Tool Matrix Grid -->
+    <g transform="translate(306, 362)">
+      <rect x="0" y="0" width="810" height="180" rx="10" fill="#0E1423" stroke="#1E293B" stroke-width="1"/>
+      
+      <text x="22" y="28" fill="#E2E8F0" font-family="-apple-system, sans-serif" font-size="14" font-weight="700">Developer Play Store &amp; Runtime Ecosystem</text>
+      <text x="680" y="28" fill="#818CF8" font-family="monospace" font-size="11">Explore All (32) →</text>
+
+      <!-- Tool 1 -->
+      <rect x="20" y="44" width="240" height="116" rx="8" fill="#141C2E" stroke="#26344E" stroke-width="1"/>
+      <rect x="36" y="58" width="32" height="32" rx="6" fill="#6366F1"/>
+      <text x="44" y="80" fill="#FFFFFF" font-family="monospace" font-size="16" font-weight="700">TS</text>
+      <text x="78" y="72" fill="#F1F5F9" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">TypeScript 5.8</text>
+      <text x="78" y="88" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="11">Strict Typing Matrix</text>
+      <text x="36" y="118" fill="#64748B" font-family="-apple-system, sans-serif" font-size="11">Zero runtime overhead</text>
+      <rect x="180" y="126" width="65" height="20" rx="4" fill="#10B981" fill-opacity="0.15"/>
+      <text x="188" y="140" fill="#34D399" font-family="monospace" font-size="10" font-weight="600">INSTALLED</text>
+
+      <!-- Tool 2 -->
+      <rect x="285" y="44" width="240" height="116" rx="8" fill="#141C2E" stroke="#26344E" stroke-width="1"/>
+      <rect x="301" y="58" width="32" height="32" rx="6" fill="#06B6D4"/>
+      <text x="309" y="80" fill="#FFFFFF" font-family="monospace" font-size="16" font-weight="700">TW</text>
+      <text x="343" y="72" fill="#F1F5F9" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Tailwind CSS v4</text>
+      <text x="343" y="88" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="11">JIT Compiler Oxide</text>
+      <text x="301" y="118" fill="#64748B" font-family="-apple-system, sans-serif" font-size="11">Design tokens &amp; layout</text>
+      <rect x="445" y="126" width="65" height="20" rx="4" fill="#10B981" fill-opacity="0.15"/>
+      <text x="453" y="140" fill="#34D399" font-family="monospace" font-size="10" font-weight="600">INSTALLED</text>
+
+      <!-- Tool 3 -->
+      <rect x="550" y="44" width="240" height="116" rx="8" fill="#141C2E" stroke="#26344E" stroke-width="1"/>
+      <rect x="566" y="58" width="32" height="32" rx="6" fill="#8B5CF6"/>
+      <text x="575" y="80" fill="#FFFFFF" font-family="monospace" font-size="16" font-weight="700">API</text>
+      <text x="608" y="72" fill="#F1F5F9" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Express Middleware</text>
+      <text x="608" y="88" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="11">Full-Stack Proxy Route</text>
+      <text x="566" y="118" fill="#64748B" font-family="-apple-system, sans-serif" font-size="11">REST endpoint server</text>
+      <rect x="710" y="126" width="65" height="20" rx="4" fill="#10B981" fill-opacity="0.15"/>
+      <text x="718" y="140" fill="#34D399" font-family="monospace" font-size="10" font-weight="600">INSTALLED</text>
+    </g>
+
+    <!-- Bottom Status Bar -->
+    <rect x="60" y="556" width="1080" height="34" rx="0" fill="#0A0E17"/>
+    <line x1="60" y1="556" x2="1140" y2="556" stroke="#1E293B" stroke-width="1"/>
+    
+    <text x="82" y="578" fill="#64748B" font-family="monospace" font-size="11">⎇ git:main</text>
+    <text x="180" y="578" fill="#64748B" font-family="monospace" font-size="11">⚡ Port: 3000 (Vite Ready)</text>
+    <text x="360" y="578" fill="#64748B" font-family="monospace" font-size="11">◉ Live Server: devhub-client.vercel.app</text>
+    <text x="960" y="578" fill="#10B981" font-family="monospace" font-size="11">● Telemetry Stream Active</text>
+  </g>
+</svg>

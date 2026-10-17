@@ -40,6 +40,8 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
     <section id="projects" className={`py-24 relative transition-colors ${
       isDark ? 'bg-[#090B12]' : 'bg-[#FAF8FF]'
     }`}>
+      {/* Anchor alias for #works */}
+      <div id="works" className="absolute -top-20" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header & Interactive Filter Bar */}

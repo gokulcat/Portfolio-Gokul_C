@@ -7,9 +7,11 @@ export const ExperienceTimeline: React.FC = () => {
   const { isDark } = useTheme();
 
   return (
-    <section id="experience" className={`py-24 relative border-t transition-colors ${
+    <section id="careers" className={`py-24 relative border-t transition-colors ${
       isDark ? 'bg-[#090B12] border-white/[0.06]' : 'bg-[#F2F3FF] border-slate-200'
     }`}>
+      {/* Anchor alias for #experience */}
+      <div id="experience" className="absolute -top-20" aria-hidden="true" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -19,7 +21,7 @@ export const ExperienceTimeline: React.FC = () => {
           }`}>
             <span>Career Progression</span>
             <span aria-hidden="true">·</span>
-            <span>Trajectory</span>
+            <span>Careers & Trajectory</span>
           </div>
           <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold tracking-tight [text-wrap:balance] ${
             isDark ? 'text-white' : 'text-[#131B2E]'
