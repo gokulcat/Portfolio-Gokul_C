@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { MarqueeStrip } from './components/MarqueeStrip';
@@ -13,10 +14,10 @@ import { ProjectCaseStudyModal } from './components/ProjectCaseStudyModal';
 import { ResumeModal } from './components/ResumeModal';
 import { Project } from './data/portfolioData';
 
-export default function App() {
+function PortfolioApp() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [resumeOpen, setResumeOpen] = useState<boolean>(false);
-  const [activeAccent, setActiveAccent] = useState<'indigo' | 'amber' | 'emerald'>('indigo');
+  const { isDark } = useTheme();
 
   const scrollToProjects = () => {
     const el = document.getElementById('projects');
@@ -24,13 +25,11 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen bg-[#08090E] text-[#E2E8F0] selection:bg-indigo-600 selection:text-white theme-${activeAccent}`}>
-      {/* Top Bar Navigation */}
-      <Navbar
-        onOpenResume={() => setResumeOpen(true)}
-        activeAccent={activeAccent}
-        onSelectAccent={(accent) => setActiveAccent(accent as any)}
-      />
+    <div className={`min-h-screen transition-colors duration-300 ${
+      isDark ? 'bg-[#08090E] text-[#E2E8F0]' : 'bg-[#FAF8FF] text-[#131B2E]'
+    } selection:bg-indigo-600 selection:text-white`}>
+      {/* Top Bar Navigation with Sun / Crescent Moon Theme Toggle */}
+      <Navbar onOpenResume={() => setResumeOpen(true)} />
 
       {/* Main Content */}
       <main>
@@ -43,7 +42,7 @@ export default function App() {
         {/* Endless Runway Marquee Ribbon */}
         <MarqueeStrip />
 
-        {/* Selected Works Bento Grid (All Projects Preserved) */}
+        {/* Selected Works Bento Grid */}
         <SelectedProjects
           onSelectProject={(project) => setSelectedProject(project)}
         />
@@ -81,5 +80,13 @@ export default function App() {
         onClose={() => setResumeOpen(false)}
       />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <ThemeProvider>
+      <PortfolioApp />
+    </ThemeProvider>
   );
 }
