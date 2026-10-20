@@ -318,7 +318,7 @@ export const ContactSection: React.FC = () => {
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Hi Gokul, I saw your work on VRV Security and WealthWise..."
+                      placeholder="Hi Gokul, I saw your work on Role-Based Access Control and WealthWise..."
                       className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none resize-y ${
                         isDark 
                           ? 'bg-[#0F121C] border-white/[0.08] focus:border-indigo-500 text-white placeholder-slate-500' 

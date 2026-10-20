@@ -49,7 +49,7 @@ ReactJS, Angular, JavaScript, TypeScript, RxJS, NgRx, Redux, HTML5, CSS3/SCSS, T
 
 Key Projects:
 1. Developer Portfolio: https://gokulportfolio28.netlify.app
-2. VRV Security RBAC: https://vrv-security-assignment-axf7.vercel.app/
+2. Role-Based Access Control (RBAC): https://rbac-application.vercel.app
 3. WealthWise FinTech: https://wealth-path.vercel.app/`;
 
     navigator.clipboard.writeText(text);

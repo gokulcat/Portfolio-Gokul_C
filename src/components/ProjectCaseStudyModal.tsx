@@ -12,7 +12,7 @@ interface ProjectCaseStudyModalProps {
 }
 
 export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ project, onClose }) => {
-  // Existing state for VRV and Wealthwise
+  // Existing state for RBAC and Wealthwise
   const [selectedRole, setSelectedRole] = useState<'Admin' | 'Manager' | 'Viewer'>('Manager');
   const [monthlyIncome, setMonthlyIncome] = useState<number>(4500);
   const [savingsRate, setSavingsRate] = useState<number>(30);
@@ -449,8 +449,8 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
             </div>
           )}
 
-          {/* INTERACTIVE SIMULATION 1: VRV Security RBAC Role Matrix Sandbox */}
-          {project.id === 'vrv-security-rbac' && (
+          {/* INTERACTIVE SIMULATION 1: Role-Based Access Control (RBAC) Role Matrix Sandbox */}
+          {(project.id === 'rbac-application' || project.id === 'vrv-security-rbac') && (
             <div className={`p-5 rounded-2xl border space-y-4 ${
               isDark ? 'bg-indigo-950/20 border-indigo-500/30' : 'bg-indigo-50/60 border-indigo-200'
             }`}>
