@@ -1,16 +1,63 @@
 import React, { useState } from 'react';
-import { Mail, Send, Check, Copy, Linkedin, Github, Youtube, Instagram, MapPin } from 'lucide-react';
+import { Mail, Send, Check, Copy, Linkedin, Github, Youtube, Instagram, MapPin, AlertCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
 
+type FormField = 'name' | 'email' | 'subject' | 'message';
+type FormValues = Record<FormField, string>;
+type FormErrors = Partial<Record<FormField, string>>;
+type FormTouched = Partial<Record<FormField, boolean>>;
+
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+const validateField = (field: FormField, value: string): string | undefined => {
+  const trimmed = value.trim();
+
+  switch (field) {
+    case 'name':
+      if (!trimmed) return 'Please enter your name.';
+      if (trimmed.length < 2) return 'Name must be at least 2 characters.';
+      if (trimmed.length > 100) return 'Name must be 100 characters or fewer.';
+      return undefined;
+    case 'email':
+      if (!trimmed) return 'Please enter your email address.';
+      if (!EMAIL_REGEX.test(trimmed)) {
+        return 'Please enter a valid email address (e.g., name@domain.com).';
+      }
+      return undefined;
+    case 'subject':
+      if (trimmed.length > 0 && trimmed.length < 3) {
+        return 'Subject must be at least 3 characters if provided.';
+      }
+      if (trimmed.length > 150) return 'Subject must be 150 characters or fewer.';
+      return undefined;
+    case 'message':
+      if (!trimmed) return 'Please enter a message.';
+      if (trimmed.length < 10) return 'Message must be at least 10 characters.';
+      if (trimmed.length > 2000) return 'Message must be 2000 characters or fewer.';
+      return undefined;
+  }
+};
+
+const validateAllFields = (values: FormValues): FormErrors => {
+  const errors: FormErrors = {};
+  (['name', 'email', 'subject', 'message'] as FormField[]).forEach((field) => {
+    const err = validateField(field, values[field]);
+    if (err) errors[field] = err;
+  });
+  return errors;
+};
+
 export const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormValues>({
     name: '',
     email: '',
     subject: '',
     message: '',
   });
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState<FormTouched>({});
   const [copied, setCopied] = useState(false);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
   const { isDark } = useTheme();
@@ -21,9 +68,44 @@ export const ContactSection: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleFieldChange = (field: FormField, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    if (touched[field] || errors[field]) {
+      const nextErr = validateField(field, value);
+      setErrors((prev) => {
+        const updated = { ...prev };
+        if (nextErr) updated[field] = nextErr;
+        else delete updated[field];
+        return updated;
+      });
+    }
+  };
+
+  const handleFieldBlur = (field: FormField) => {
+    setTouched((prev) => ({ ...prev, [field]: true }));
+    const err = validateField(field, formData[field]);
+    setErrors((prev) => {
+      const updated = { ...prev };
+      if (err) updated[field] = err;
+      else delete updated[field];
+      return updated;
+    });
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+    const validationErrors = validateAllFields(formData);
+    setTouched({ name: true, email: true, subject: true, message: true });
+    setErrors(validationErrors);
+
+    const firstInvalidField = (['name', 'email', 'subject', 'message'] as FormField[]).find(
+      (field) => validationErrors[field]
+    );
+
+    if (firstInvalidField) {
+      document.getElementById(firstInvalidField)?.focus();
+      return;
+    }
 
     setStatus('submitting');
     setTimeout(() => {
@@ -35,6 +117,8 @@ export const ContactSection: React.FC = () => {
       });
       setTimeout(() => {
         setFormData({ name: '', email: '', subject: '', message: '' });
+        setErrors({});
+        setTouched({});
         setStatus('idle');
       }, 4000);
     }, 800);
@@ -241,7 +325,7 @@ export const ContactSection: React.FC = () => {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} noValidate className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label htmlFor="name" className={`text-xs font-mono block font-medium ${
@@ -251,17 +335,31 @@ export const ContactSection: React.FC = () => {
                       </label>
                       <input
                         id="name"
+                        name="name"
                         type="text"
                         required
+                        aria-invalid={Boolean(errors.name)}
+                        aria-describedby={errors.name ? 'name-error' : undefined}
                         value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        onChange={(e) => handleFieldChange('name', e.target.value)}
+                        onBlur={() => handleFieldBlur('name')}
                         placeholder="e.g. Sarah Jenkins"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none ${
-                          isDark 
-                            ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500' 
-                            : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
+                          errors.name
+                            ? isDark
+                              ? 'bg-[#0F121C] border-rose-500/80 focus:border-rose-400 text-white placeholder-slate-500'
+                              : 'bg-white border-rose-500 focus:border-rose-600 focus:ring-1 focus:ring-rose-500 text-slate-900 placeholder-slate-400 shadow-xs'
+                            : isDark
+                              ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500'
+                              : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
                         }`}
                       />
+                      {errors.name && (
+                        <p id="name-error" role="alert" className="flex items-center gap-1.5 text-xs text-rose-500 dark:text-rose-400 pt-0.5">
+                          <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                          <span>{errors.name}</span>
+                        </p>
+                      )}
                     </div>
 
                     <div className="space-y-1.5">
@@ -272,17 +370,31 @@ export const ContactSection: React.FC = () => {
                       </label>
                       <input
                         id="email"
+                        name="email"
                         type="email"
                         required
+                        aria-invalid={Boolean(errors.email)}
+                        aria-describedby={errors.email ? 'email-error' : undefined}
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onChange={(e) => handleFieldChange('email', e.target.value)}
+                        onBlur={() => handleFieldBlur('email')}
                         placeholder="s.jenkins@company.com"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none ${
-                          isDark 
-                            ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500' 
-                            : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
+                          errors.email
+                            ? isDark
+                              ? 'bg-[#0F121C] border-rose-500/80 focus:border-rose-400 text-white placeholder-slate-500'
+                              : 'bg-white border-rose-500 focus:border-rose-600 focus:ring-1 focus:ring-rose-500 text-slate-900 placeholder-slate-400 shadow-xs'
+                            : isDark
+                              ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500'
+                              : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
                         }`}
                       />
+                      {errors.email && (
+                        <p id="email-error" role="alert" className="flex items-center gap-1.5 text-xs text-rose-500 dark:text-rose-400 pt-0.5">
+                          <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                          <span>{errors.email}</span>
+                        </p>
+                      )}
                     </div>
                   </div>
 
@@ -294,37 +406,76 @@ export const ContactSection: React.FC = () => {
                     </label>
                     <input
                       id="subject"
+                      name="subject"
                       type="text"
+                      aria-invalid={Boolean(errors.subject)}
+                      aria-describedby={errors.subject ? 'subject-error' : undefined}
                       value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      onChange={(e) => handleFieldChange('subject', e.target.value)}
+                      onBlur={() => handleFieldBlur('subject')}
                       placeholder="Frontend Opportunity (React / Angular) / Collaboration"
                       className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none ${
-                        isDark 
-                          ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500' 
+                        errors.subject
+                          ? isDark
+                            ? 'bg-[#0F121C] border-rose-500/80 focus:border-rose-400 text-white placeholder-slate-500'
+                            : 'bg-white border-rose-500 focus:border-rose-600 focus:ring-1 focus:ring-rose-500 text-slate-900 placeholder-slate-400 shadow-xs'
+                          : isDark
+                            ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500'
                             : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
                       }`}
                     />
+                    {errors.subject && (
+                      <p id="subject-error" role="alert" className="flex items-center gap-1.5 text-xs text-rose-500 dark:text-rose-400 pt-0.5">
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                        <span>{errors.subject}</span>
+                      </p>
+                    )}
                   </div>
 
                   <div className="space-y-1.5">
-                    <label htmlFor="message" className={`text-xs font-mono block font-medium ${
-                      isDark ? 'text-slate-300' : 'text-slate-700'
-                    }`}>
-                      Message *
-                    </label>
+                    <div className="flex items-center justify-between gap-2">
+                      <label htmlFor="message" className={`text-xs font-mono block font-medium ${
+                        isDark ? 'text-slate-300' : 'text-slate-700'
+                      }`}>
+                        Message *
+                      </label>
+                      <span className={`text-[11px] font-mono tabular-nums ${
+                        formData.message.trim().length > 2000
+                          ? 'text-rose-500'
+                          : isDark
+                            ? 'text-slate-500'
+                            : 'text-slate-500'
+                      }`}>
+                        {formData.message.trim().length} / 2000
+                      </span>
+                    </div>
                     <textarea
                       id="message"
+                      name="message"
                       rows={5}
                       required
+                      aria-invalid={Boolean(errors.message)}
+                      aria-describedby={errors.message ? 'message-error' : undefined}
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) => handleFieldChange('message', e.target.value)}
+                      onBlur={() => handleFieldBlur('message')}
                       placeholder="Hi Gokul, I saw your work on Role-Based Access Control and WealthWise..."
                       className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none resize-y ${
-                        isDark 
-                          ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500' 
-                          : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
+                        errors.message
+                          ? isDark
+                            ? 'bg-[#0F121C] border-rose-500/80 focus:border-rose-400 text-white placeholder-slate-500'
+                            : 'bg-white border-rose-500 focus:border-rose-600 focus:ring-1 focus:ring-rose-500 text-slate-900 placeholder-slate-400 shadow-xs'
+                          : isDark
+                            ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500'
+                            : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
                       }`}
                     ></textarea>
+                    {errors.message && (
+                      <p id="message-error" role="alert" className="flex items-center gap-1.5 text-xs text-rose-500 dark:text-rose-400 pt-0.5">
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                        <span>{errors.message}</span>
+                      </p>
+                    )}
                   </div>
 
                   <button

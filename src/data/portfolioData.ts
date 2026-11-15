@@ -49,7 +49,7 @@ export const PORTFOLIO_DATA = {
     ],
     socials: {
       github: "https://github.com/gokulcat",
-      linkedin: "https://www.linkedin.com/in/gokul-c-9647401a0/",
+      linkedin: "https://www.linkedin.com/in/gokulc-ui/",
       youtube: "https://www.youtube.com/@gokulcat15",
       instagram: "https://www.instagram.com/the_.bub/",
       email: "mailto:gokulcat15@gmail.com"
