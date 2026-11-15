@@ -43,7 +43,7 @@ export const PORTFOLIO_DATA = {
     collaborationQuote: "Collaboration is at the heart of my workflow—whether it’s working closely with designers or ensuring proper design-to-code handoffs.",
     stats: [
       { label: "Experience", value: "4.5+ Years", detail: "Frontend Engineering" },
-      { label: "Core Projects", value: "5 Featured", detail: "Full Case Studies" },
+      { label: "Core Projects", value: "4 Featured", detail: "Full Case Studies" },
       { label: "Design Fidelity", value: "100%", detail: "Pixel-perfect Figma to Code" },
       { label: "Specialization", value: "React & Angular", detail: "Expanding to Full-Stack" }
     ],
@@ -85,37 +85,6 @@ export const PORTFOLIO_DATA = {
         {
           challenge: "Building a scalable tool marketplace with modular plug-in cards and instant search filtering.",
           solution: "Structured normalized catalog stores with client-side indexing and asynchronous module resolution."
-        }
-      ]
-    },
-    {
-      id: "mint-vault",
-      title: "Wealthora / MintVault — Smart Salary Splitter & Automated Wealth",
-      shortTitle: "MintVault FinTech",
-      category: "FinTech & Analytics",
-      subtitle: "Autonomous Multi-Currency Salary Allocation Engine !",
-      overview: "Wealthora (MintVault) is an autonomous multi-currency salary allocation platform featuring a dynamic 50/30/20 cash engine, high-yield vault compounding projections, and smart sinking funds for modern wealth building.",
-      extendedOverview: "MintVault transforms complex financial allocation into intuitive, automated workflows. Users configure their monthly paycheck streams across global currencies, instantly split earnings into essential needs, discretionary spending, and compounding high-yield vaults (8.4%+ APY), and forecast future milestones with zero friction.",
-      image: "/assets/project_mint_vault.svg",
-      liveUrl: "https://mint-vault-omega.vercel.app/",
-      codeUrl: "https://github.com/gokulcat/MintVault",
-      tools: ["React", "TypeScript", "Tailwind CSS", "Material Symbols", "Vite", "GIT"],
-      role: "Frontend Architect & UI Engineer",
-      timeline: "Production Delivery",
-      keyAchievements: [
-        "Autonomous 50/30/20 dynamic budget allocation engine with live slider distribution recalculations",
-        "Multi-currency FX routing engine supporting USD, EUR, GBP, and INR with real-time conversion rates",
-        "High-yield compound interest milestone simulator with interactive timeline visualization",
-        "Goal-oriented sinking funds tracker with target date projections and automated monthly delta calculations"
-      ],
-      challengesAndSolutions: [
-        {
-          challenge: "Handling real-time currency conversions across divergent currency fractions without rounding drift.",
-          solution: "Implemented high-precision integer-cent arithmetic routines coupled with centralized FX routing tables."
-        },
-        {
-          challenge: "Visualizing compounding curves and expense ratios across multiple simultaneous saving goals.",
-          solution: "Built custom responsive SVG telemetry dials and interactive allocation bars that smoothly interpolate state changes."
         }
       ]
     },

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   X, ExternalLink, Github, CheckCircle2, Shield, DollarSign, Lock, Unlock, 
-  Terminal, Cpu, Layers, Sparkles, TrendingUp, Wallet, ArrowRight, Play, RefreshCw
+  Terminal, Cpu, Layers, Sparkles, TrendingUp, ArrowRight, Play, RefreshCw
 } from 'lucide-react';
 import { Project } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
@@ -25,15 +25,6 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
     6379: false,
   });
   const [terminalMessage, setTerminalMessage] = useState<string>('Ready. Listening on isolated environment ports.');
-
-  // MintVault state
-  const [mintCurrency, setMintCurrency] = useState<{ symbol: string; rate: number; label: string }>({
-    symbol: '$',
-    rate: 1,
-    label: 'USD',
-  });
-  const [mintSalary, setMintSalary] = useState<number>(7500);
-  const [vaultApy] = useState<number>(8.4);
 
   const { isDark } = useTheme();
 
@@ -82,13 +73,6 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
   // Wealthwise calculations
   const calculatedSavings = Math.round((monthlyIncome * savingsRate) / 100);
   const calculatedExpenses = monthlyIncome - calculatedSavings;
-
-  // MintVault calculations
-  const mintNeeds = Math.round(mintSalary * 0.5);
-  const mintWants = Math.round(mintSalary * 0.3);
-  const mintVaultMonthly = Math.round(mintSalary * 0.2);
-  const annualVaultContribution = mintVaultMonthly * 12;
-  const projectedVault3Yr = Math.round(annualVaultContribution * 3 * (1 + (vaultApy / 100) * 1.5));
 
   const togglePort = (port: number) => {
     setActivePorts(prev => {
@@ -339,112 +323,6 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
               <div className="p-3 rounded-xl bg-black/70 border border-white/[0.08] font-mono text-xs flex items-center gap-2">
                 <span className="text-emerald-400">devhub@system:~$</span>
                 <span className="text-slate-200 truncate">{terminalMessage}</span>
-              </div>
-            </div>
-          )}
-
-          {/* =========================================================================
-              INTERACTIVE SIMULATION B: Wealthora / MintVault Salary Engine (project.id === 'mint-vault')
-             ========================================================================= */}
-          {project.id === 'mint-vault' && (
-            <div className={`p-5 rounded-2xl border space-y-4 ${
-              isDark ? 'bg-emerald-950/20 border-emerald-500/30' : 'bg-emerald-50/60 border-emerald-200'
-            }`}>
-              <div className="flex items-center justify-between pb-3 border-b border-emerald-500/20">
-                <div className="flex items-center gap-2">
-                  <Wallet className="w-4 h-4 text-emerald-500" />
-                  <span className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>
-                    Wealthora 50/30/20 Multi-Currency Salary Allocator &amp; Compounding Engine
-                  </span>
-                </div>
-                <span className={`text-[11px] font-mono font-medium ${isDark ? 'text-emerald-300' : 'text-emerald-700'}`}>
-                  Live FinTech Simulation
-                </span>
-              </div>
-
-              {/* Currency Selector */}
-              <div className="flex items-center justify-between gap-4 flex-wrap">
-                <div className={`text-xs font-mono ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
-                  Select Currency:
-                </div>
-                <div className="flex items-center gap-1.5">
-                  {[
-                    { symbol: '$', rate: 1, label: 'USD' },
-                    { symbol: '€', rate: 0.92, label: 'EUR' },
-                    { symbol: '£', rate: 0.79, label: 'GBP' },
-                    { symbol: '₹', rate: 86.4, label: 'INR' },
-                  ].map((curr) => (
-                    <button
-                      key={curr.label}
-                      onClick={() => setMintCurrency(curr)}
-                      className={`px-3 py-1 rounded-lg text-xs font-mono font-semibold transition-colors cursor-pointer ${
-                        mintCurrency.label === curr.label
-                          ? 'bg-emerald-600 text-white'
-                          : isDark
-                            ? 'bg-white/[0.05] text-slate-400 hover:text-white'
-                            : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-300'
-                      }`}
-                    >
-                      {curr.label} ({curr.symbol})
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Salary Slider */}
-              <div>
-                <div className={`flex justify-between text-xs mb-1.5 ${
-                  isDark ? 'text-slate-300' : 'text-slate-700'
-                }`}>
-                  <span className="font-mono">Monthly Paycheck Stream</span>
-                  <span className={`font-mono font-bold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>
-                    {mintCurrency.symbol}{Math.round(mintSalary * mintCurrency.rate).toLocaleString()} / mo
-                  </span>
-                </div>
-                <input
-                  type="range"
-                  min={2500}
-                  max={20000}
-                  step={250}
-                  value={mintSalary}
-                  onChange={(e) => setMintSalary(Number(e.target.value))}
-                  className="w-full accent-emerald-500 cursor-pointer h-2 bg-slate-300 dark:bg-slate-700 rounded-lg"
-                />
-              </div>
-
-              {/* 3 Calculated Buckets */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <div className={`p-3.5 rounded-xl border ${
-                  isDark ? 'bg-black/40 border-white/[0.08]' : 'bg-white border-slate-200'
-                }`}>
-                  <div className="text-[11px] font-mono text-sky-500 font-semibold mb-1">50% Essential Needs</div>
-                  <div className={`text-lg font-mono font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                    {mintCurrency.symbol}{Math.round(mintNeeds * mintCurrency.rate).toLocaleString()}
-                  </div>
-                  <div className="text-[10px] text-slate-500 mt-1">Rent, Utilities, Food</div>
-                </div>
-
-                <div className={`p-3.5 rounded-xl border ${
-                  isDark ? 'bg-black/40 border-white/[0.08]' : 'bg-white border-slate-200'
-                }`}>
-                  <div className="text-[11px] font-mono text-amber-500 font-semibold mb-1">30% Lifestyle &amp; Wants</div>
-                  <div className={`text-lg font-mono font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                    {mintCurrency.symbol}{Math.round(mintWants * mintCurrency.rate).toLocaleString()}
-                  </div>
-                  <div className="text-[10px] text-slate-500 mt-1">Dining, Travel, Gear</div>
-                </div>
-
-                <div className={`p-3.5 rounded-xl border ${
-                  isDark ? 'bg-emerald-500/10 border-emerald-500/30' : 'bg-emerald-50 border-emerald-200'
-                }`}>
-                  <div className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-semibold mb-1">20% Mint Vault (8.4% APY)</div>
-                  <div className="text-lg font-mono font-bold text-emerald-600 dark:text-emerald-400">
-                    +{mintCurrency.symbol}{Math.round(mintVaultMonthly * mintCurrency.rate).toLocaleString()}<span className="text-xs font-normal">/mo</span>
-                  </div>
-                  <div className="text-[10px] text-emerald-700 dark:text-emerald-300 mt-1 font-mono">
-                    3-Yr Projected: {mintCurrency.symbol}{Math.round(projectedVault3Yr * mintCurrency.rate).toLocaleString()}
-                  </div>
-                </div>
               </div>
             </div>
           )}

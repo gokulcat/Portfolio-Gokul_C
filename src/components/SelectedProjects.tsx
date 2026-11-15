@@ -146,7 +146,9 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {filteredProjects.map((project, index) => {
-            const isWide = activeCategory === 'all' && index === 0;
+            const isWide =
+              activeCategory === 'all' &&
+              (index === 0 || (filteredProjects.length % 2 === 0 && index === filteredProjects.length - 1));
 
             return (
               <div
