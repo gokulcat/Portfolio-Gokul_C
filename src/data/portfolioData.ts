@@ -182,33 +182,33 @@ export const PORTFOLIO_DATA = {
       ]
     },
     {
-      id: "portfolio-v1",
-      title: "Developer Portfolio & Personal Brand",
-      shortTitle: "Personal Portfolio",
+      id: "portfolio-gokul-ui",
+      title: "Gokul C — Interactive Portfolio & Tailwind v4 Studio",
+      shortTitle: "Portfolio & UI Lab",
       category: "Web Application",
-      subtitle: "Portfolio about ME !",
-      overview: "Welcome to my portfolio! This space is a reflection of my journey as a Full Stack Developer and my passion for creating innovative, user-focused web applications. A Centralized Hub for My Professional Journey! The portfolio project serves as a dynamic, interactive space that highlights my professional growth, key achievements, and technical expertise.",
-      extendedOverview: "It’s a digital representation of who I am as a developer, detailing my career journey and creative pursuits. Designed with clean semantic markup, custom styling abstractions, responsive media queries, and streamlined user navigation across devices.",
-      image: "/assets/project_1.png",
-      liveUrl: "https://gokulportfolio28.netlify.app",
-      codeUrl: "https://github.com/gokulcat/Portfolio",
-      tools: ["HTML", "CSS", "JavaScript", "React", "SCSS", "GIT"],
-      role: "Lead Frontend Architect",
-      timeline: "Continuous Iteration",
+      subtitle: "Modern Frontend Engineering Showcase & Live CSS Lab !",
+      overview: "A modern, dual-theme developer portfolio engineered with React 19, TypeScript, and Tailwind CSS v4. Features an interactive Tailwind utility playground, bento-grid case study modals, printable CV viewer, and validated contact workflows.",
+      extendedOverview: "Built to showcase production frontend craftsmanship in React, Angular, and modern CSS architecture, this platform combines a refined Light/Dark theme engine with an interactive Tailwind CSS v4 Token Lab, scroll-linked reading progress, filterable Bento project case studies, and an instant print-ready Resume/CV modal.",
+      image: "/assets/project_portfolio_ui.png",
+      liveUrl: "https://portfolio-gokul-ui.vercel.app/",
+      codeUrl: "https://github.com/gokulcat/Portfolio-Gokul_C",
+      tools: ["React 19", "TypeScript", "Tailwind CSS v4", "Motion", "Vite", "Express"],
+      role: "Lead Frontend & UI/UX Engineer",
+      timeline: "Production Delivery",
       keyAchievements: [
-        "100% responsive cross-device layout tested across desktop, tablet, and mobile",
-        "Dynamic modular component hierarchy with SCSS design variables",
-        "Sub-second initial paint speed and optimized bundle loading",
-        "Clean interactive case study presentation and resume integration"
+        "Interactive Tailwind CSS v4 utility-first playground with real-time class calibration and copyable output",
+        "Seamless Light & Dark theme system with custom glassmorphic surfaces and accessible contrast tokens",
+        "Bento-grid case study explorer, deep-dive project modals, and print-ready Resume/CV document preview",
+        "Client-side validated contact workflow, subtle hover glow micro-interactions, and dark-blue scroll progress bar"
       ],
       challengesAndSolutions: [
         {
-          challenge: "Creating a distinct visual identity that balances technical depth with aesthetic polish.",
-          solution: "Established a custom SCSS architecture with consistent typography scales, reusable button and section primitives, and subtle micro-interactions."
+          challenge: "Balancing expressive visual polish (glassmorphism, animated glows, and live CSS controls) with 60 FPS scroll and render performance.",
+          solution: "Leveraged GPU-composited transforms, CSS custom properties, and lightweight React state updates with Tailwind v4 zero-runtime utility generation."
         },
         {
-          challenge: "Ensuring smooth asset loading without slowing initial paint.",
-          solution: "Utilized asynchronous image loading, optimized vector icons, and lazy-loaded media assets."
+          challenge: "Delivering consistent readability and brand uniformity across both Dark and Light modes in interactive previews and modals.",
+          solution: "Engineered a centralized ThemeContext paired with semantic surface utilities and accessible sky/slate contrast pairs across every component."
         }
       ]
     }
