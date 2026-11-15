@@ -164,7 +164,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                       }}
                       className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                         !isDark
-                          ? 'bg-amber-500/10 text-amber-700 dark:text-amber-300 font-semibold border border-amber-500/20'
+                          ? 'bg-amber-500/10 text-amber-900 font-semibold border border-amber-500/25'
                           : 'text-slate-300 hover:text-white hover:bg-white/[0.08]'
                       }`}
                     >
@@ -174,8 +174,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                         <Sun className="w-3.5 h-3.5" />
                       </div>
                       <div className="flex flex-col text-left">
-                        <span className="font-semibold text-slate-900 dark:text-slate-100">Light</span>
-                        <span className="text-[10px] text-slate-500 dark:text-slate-400">Crisp high contrast</span>
+                        <span className={`font-semibold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>Light</span>
+                        <span className={`text-[10px] ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Crisp high contrast</span>
                       </div>
                       {!isDark && <Check className="w-4 h-4 ml-auto text-indigo-600" />}
                     </button>
@@ -201,8 +201,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                         <Moon className="w-3.5 h-3.5" />
                       </div>
                       <div className="flex flex-col text-left">
-                        <span className="font-semibold text-slate-900 dark:text-slate-100">Dark</span>
-                        <span className="text-[10px] text-slate-500 dark:text-slate-400">Deep obsidian & neon</span>
+                        <span className={`font-semibold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>Dark</span>
+                        <span className={`text-[10px] ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Deep obsidian & neon</span>
                       </div>
                       {isDark && <Check className="w-4 h-4 ml-auto text-indigo-400" />}
                     </button>

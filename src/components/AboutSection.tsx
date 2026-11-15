@@ -69,7 +69,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
             <p className={`text-sm sm:text-base leading-relaxed ${
               isDark ? 'text-slate-300' : 'text-slate-700'
             }`}>
-              Over the last 4.5+ years, I have collaborated across teams to bridge the gap between creative visual designs and resilient technical implementations across React.js and Angular ecosystems. My work centers on building component systems that scale effortlessly without sacrificing performance or accessibility.
+              Over the last 4.5+ years, I have collaborated across teams to bridge the gap between creative visual designs and resilient technical implementations across React and Angular ecosystems. My work centers on building component systems that scale effortlessly without sacrificing performance or accessibility.
             </p>
 
             <div className={`p-6 rounded-2xl border relative overflow-hidden ${

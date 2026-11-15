@@ -20,8 +20,8 @@ export const Footer: React.FC = () => {
           isDark ? 'border-white/[0.06]' : 'border-slate-200'
         }`}>
           {/* Brand mark */}
-          <div className="flex items-center gap-3">
-            <span className={`font-display font-bold text-xl ${
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-3 gap-y-1 text-center md:text-left">
+            <span className={`font-display font-bold text-xl whitespace-nowrap shrink-0 ${
               isDark ? 'text-white' : 'text-[#131B2E]'
             }`}>
               Gokul C
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
             <span className={`text-xs font-mono font-medium ${
               isDark ? 'text-slate-400' : 'text-slate-600'
             }`}>
-              · Frontend Developer (React & Angular)
+              · Frontend Engineer (React & Angular)
             </span>
           </div>
 
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Quiet Copyright Row */}
-        <div className={`pt-8 flex flex-col sm:row items-center justify-between gap-4 text-xs font-mono font-medium ${
+        <div className={`pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono font-medium ${
           isDark ? 'text-slate-400' : 'text-slate-600'
         }`}>
           <div>

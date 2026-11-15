@@ -32,14 +32,14 @@ export interface SkillCategory {
 export const PORTFOLIO_DATA = {
   profile: {
     name: "Gokul C",
-    title: "Frontend Developer (React & Angular Specialist)",
+    title: "Frontend Engineer (React & Angular Specialist)",
     email: "gokulcat15@gmail.com",
     avatar: "/assets/gokul_avatar.jpg",
     experienceYears: "4.5+",
     location: "Hyderabad, India · Open to Remote & Relocation",
     headline: "Crafting scalable, high-performance web applications with modern frontend precision.",
-    heroBio: "Hi, I'm a passionate Frontend Developer with over 4.5+ years of experience designing and developing dynamic, user-friendly web applications. I specialize in crafting seamless, scalable, and high-performance front-end solutions with a strong focus on React.js, Angular, and their modern ecosystems. I’m dedicated to building efficient and user-centric applications that solve real-world problems. My attention to detail, commitment to clean and maintainable code, and adaptability to new challenges make me a valuable asset to any development team. Let’s collaborate and create something amazing together!",
-    aboutBio: "Hi, I’m Gokul C., a Frontend Developer with a keen eye for design and a passion for building intuitive web applications. With over 4.5+ years of experience, I specialize in React.js, Angular, UI/UX design, and performance optimization techniques to deliver exceptional user experiences. My journey in development has been driven by a curiosity to explore cutting-edge technologies and solve complex problems. I’ve recently started expanding my expertise into backend development with Node.js, aiming to grow as a full-stack developer.",
+    heroBio: "Hi, I'm a passionate Frontend Engineer with over 4.5+ years of experience designing and developing dynamic, user-friendly web applications. I specialize in crafting seamless, scalable, and high-performance front-end solutions with a strong focus on React, Angular, and their modern ecosystems. I’m dedicated to building efficient and user-centric applications that solve real-world problems. My attention to detail, commitment to clean and maintainable code, and adaptability to new challenges make me a valuable asset to any development team. Let’s collaborate and create something amazing together!",
+    aboutBio: "Hi, I’m Gokul C., a Frontend Engineer with a keen eye for design and a passion for building intuitive web applications. With over 4.5+ years of experience, I specialize in React, Angular, UI/UX design, and performance optimization techniques to deliver exceptional user experiences. My journey in development has been driven by a curiosity to explore cutting-edge technologies and solve complex problems. I’ve recently started expanding my expertise into backend development with Node.js, aiming to grow as a full-stack engineer.",
     collaborationQuote: "Collaboration is at the heart of my workflow—whether it’s working closely with designers or ensuring proper design-to-code handoffs.",
     stats: [
       { label: "Experience", value: "4.5+ Years", detail: "Frontend Engineering" },
@@ -131,7 +131,7 @@ export const PORTFOLIO_DATA = {
       liveUrl: "https://rbac-application.vercel.app",
       codeUrl: "https://github.com/gokulcat/RBAC---Application",
       tools: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "GIT"],
-      role: "Full-Stack Frontend Developer",
+      role: "Full-Stack Frontend Engineer",
       timeline: "Production Delivery",
       keyAchievements: [
         "Dynamic permission matrix with real-time toggleable CRUD permissions",
@@ -162,7 +162,7 @@ export const PORTFOLIO_DATA = {
       liveUrl: "https://wealth-path.vercel.app/",
       codeUrl: "https://github.com/gokulcat/WealthPath",
       tools: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "GIT"],
-      role: "Frontend & UI Developer",
+      role: "Frontend & UI Engineer",
       timeline: "Production Delivery",
       keyAchievements: [
         "Interactive budget breakdown and burn velocity calculation engine",
@@ -219,7 +219,7 @@ export const PORTFOLIO_DATA = {
       title: "Frontend Engineering",
       description: "Core technologies used to build dynamic, fast, and accessible user interfaces.",
       skills: [
-        { name: "ReactJS", level: "Advanced / Core", featured: true },
+        { name: "React", level: "Advanced / Core", featured: true },
         { name: "Angular", level: "Advanced / Core", featured: true },
         { name: "TypeScript", level: "Advanced / Core", featured: true },
         { name: "JavaScript (ES6+)", level: "Advanced", featured: true },
@@ -266,9 +266,9 @@ export const PORTFOLIO_DATA = {
   experienceTimeline: [
     {
       period: "2022 — Present",
-      role: "Frontend Developer (React & Angular Specialist)",
+      role: "Frontend Engineer (React & Angular Specialist)",
       company: "Web & Enterprise Software Solutions",
-      summary: "Designing and developing production React.js and Angular web applications with a relentless focus on reactive state management, performance, and component modularity.",
+      summary: "Designing and developing production React and Angular web applications with a relentless focus on reactive state management, performance, and component modularity.",
       highlights: [
         "Architected scalable UI modules across React and Angular frameworks serving enterprise clients",
         "Implemented reactive RxJS streams and state management pipelines for dynamic data flows",
@@ -278,7 +278,7 @@ export const PORTFOLIO_DATA = {
     },
     {
       period: "2020 — 2022",
-      role: "Frontend & UI Developer",
+      role: "Frontend & UI Engineer",
       company: "Digital Studio & Freelance",
       summary: "Crafted dynamic client portfolios, interactive web interfaces, and responsive component systems using JavaScript, TypeScript, HTML5, and SASS/CSS.",
       highlights: [
@@ -290,7 +290,7 @@ export const PORTFOLIO_DATA = {
   ],
 
   marqueeItems: [
-    "REACT.JS & ANGULAR ARCHITECTURE",
+    "REACT & ANGULAR ARCHITECTURE",
     "MODERN CSS & TAILWIND",
     "TYPESCRIPT & RXJS",
     "DESIGN-TO-CODE FIDELITY",

@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
             <div className={`flex items-center gap-2 text-xs font-mono uppercase tracking-widest mb-4 font-semibold ${
               isDark ? 'text-indigo-400' : 'text-indigo-600'
             }`}>
-              <span>Frontend Developer</span>
+              <span>Frontend Engineer</span>
               <span aria-hidden="true">·</span>
               <span>React & Angular Specialist</span>
               <span aria-hidden="true">·</span>
@@ -66,14 +66,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
             <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold tracking-tight mb-6 [text-wrap:balance] leading-[1.1] ${
               isDark ? 'text-white' : 'text-[#131B2E]'
             }`}>
-              Hey, I'm <span className={isDark ? 'fashion-accent-text-dark' : 'fashion-accent-text-light'}>Gokul C</span>. Crafting dynamic, user-first web experiences.
+              Hey, I'm <span className={`whitespace-nowrap ${isDark ? 'fashion-accent-text-dark' : 'fashion-accent-text-light'}`}>Gokul C</span>. Crafting dynamic, user-first web experiences.
             </h1>
 
             {/* Authentic Bio Lead */}
             <p className={`text-base sm:text-lg font-normal leading-relaxed mb-8 max-w-2xl ${
               isDark ? 'text-slate-300' : 'text-slate-700'
             }`}>
-              A passionate <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>Frontend Developer</span> with <span className={`font-semibold ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`}>4.5+ years</span> of experience engineering high-performance web applications across <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>React.js</span> and <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>Angular</span>. Dedicated to clean architecture, intuitive interactions, and seamless design-to-code execution.
+              A passionate <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>Frontend Engineer</span> with <span className={`font-semibold ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`}>4.5+ years</span> of experience engineering high-performance web applications across <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>React</span> and <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>Angular</span>. Dedicated to clean architecture, intuitive interactions, and seamless design-to-code execution.
             </p>
 
             {/* Action Buttons */}
@@ -231,7 +231,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                     <div className="relative aspect-4/5 rounded-xl overflow-hidden bg-slate-900 border border-slate-200/20 shadow-inner">
                       <img
                         src={PORTFOLIO_DATA.profile.avatar}
-                        alt="Gokul C - Frontend Developer"
+                        alt="Gokul C - Frontend Engineer"
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover object-center filter contrast-[1.02] hover:scale-105 transition-transform duration-700"
                       />
@@ -245,7 +245,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                           <span className="font-semibold text-white">Gokul C</span>
                           <span className="text-[11px] font-mono text-indigo-300">Hyderabad / India</span>
                         </div>
-                        <p className="text-[11px] text-slate-300 mt-0.5">Frontend Developer · React & Angular Specialist</p>
+                        <p className="text-[11px] text-slate-300 mt-0.5">Frontend Engineer · React & Angular Specialist</p>
                       </div>
                     </div>
 
@@ -263,7 +263,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                   </div>
                 ) : (
                   /* Fashion CSS Inspector Card - Clean Dark Terminal */
-                  <div className="aspect-4/5 rounded-xl p-4 bg-[#0B0F19] border border-white/[0.08] font-mono text-xs overflow-y-auto space-y-3 text-slate-300">
+                  <div className="aspect-4/5 rounded-xl p-4 bg-[#0B0F19] border border-white/[0.08] font-mono text-xs overflow-y-auto scrollbar-hidden space-y-3 text-slate-300">
                     <div className="text-indigo-400 pb-1 border-b border-white/[0.08] flex items-center justify-between">
                       <span>/* Modern Fashion CSS Tokens */</span>
                       <span className="text-[10px] text-slate-400">Light & Dark OKLCH</span>

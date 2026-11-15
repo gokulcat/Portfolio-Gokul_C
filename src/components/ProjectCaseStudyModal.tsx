@@ -99,7 +99,7 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto scrollbar-hidden bg-black/80 backdrop-blur-md animate-fade-in">
       <div 
         className={`relative w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl border my-8 transition-colors ${
           isDark 
@@ -141,7 +141,7 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-6 sm:p-8 space-y-8 max-h-[75vh] overflow-y-auto">
+        <div className="p-6 sm:p-8 space-y-8 max-h-[75vh] overflow-y-auto scrollbar-hidden">
           {/* Hero Banner Image */}
           <div className="rounded-2xl overflow-hidden border border-white/[0.08] shadow-md bg-slate-950 aspect-16/9 sm:aspect-21/9 relative group">
             <img
