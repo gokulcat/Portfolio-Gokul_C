@@ -36,7 +36,7 @@ export const PORTFOLIO_DATA = {
     email: "gokulcat15@gmail.com",
     avatar: "/assets/gokul_avatar.jpg",
     experienceYears: "4.5+",
-    location: "Hyderabad, India · Open to Remote & Relocation",
+    location: "Puducherry, PY · Open to Remote & Relocation",
     headline: "Crafting scalable, high-performance web applications with modern frontend precision.",
     heroBio: "Hi, I'm a passionate Frontend Engineer with over 4.5+ years of experience designing and developing dynamic, user-friendly web applications. I specialize in crafting seamless, scalable, and high-performance front-end solutions with a strong focus on React, Angular, and their modern ecosystems. I’m dedicated to building efficient and user-centric applications that solve real-world problems. My attention to detail, commitment to clean and maintainable code, and adaptability to new challenges make me a valuable asset to any development team. Let’s collaborate and create something amazing together!",
     aboutBio: "Hi, I’m Gokul C., a Frontend Engineer with a keen eye for design and a passion for building intuitive web applications. With over 4.5+ years of experience, I specialize in React, Angular, UI/UX design, and performance optimization techniques to deliver exceptional user experiences. My journey in development has been driven by a curiosity to explore cutting-edge technologies and solve complex problems. I’ve recently started expanding my expertise into backend development with Node.js, aiming to grow as a full-stack engineer.",

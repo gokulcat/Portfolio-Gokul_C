@@ -47,20 +47,60 @@ export const Footer: React.FC = () => {
 
           {/* Social Icons & Scroll to Top */}
           <div className="flex items-center gap-4">
-            <div className={`flex items-center gap-3 ${
+            <div className={`flex items-center gap-1.5 ${
               isDark ? 'text-slate-400' : 'text-slate-600'
             }`}>
-              <a href={PORTFOLIO_DATA.profile.socials.linkedin} target="_blank" rel="noreferrer" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-sky-600'}`} aria-label="LinkedIn">
-                <Linkedin className="w-4 h-4" />
+              <a
+                href={PORTFOLIO_DATA.profile.socials.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className={`hover-social-glow p-2 rounded-lg transition-all duration-300 hover:scale-110 ${
+                  isDark
+                    ? 'hover:text-sky-400 hover:bg-sky-500/10 hover:shadow-[0_0_14px_rgba(56,189,248,0.3)]'
+                    : 'hover:text-sky-600 hover:bg-sky-500/10 hover:shadow-[0_0_12px_rgba(14,165,233,0.25)]'
+                }`}
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4 transition-transform duration-300" />
               </a>
-              <a href={PORTFOLIO_DATA.profile.socials.github} target="_blank" rel="noreferrer" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E]'}`} aria-label="GitHub">
-                <Github className="w-4 h-4" />
+              <a
+                href={PORTFOLIO_DATA.profile.socials.github}
+                target="_blank"
+                rel="noreferrer"
+                className={`hover-social-glow p-2 rounded-lg transition-all duration-300 hover:scale-110 ${
+                  isDark
+                    ? 'hover:text-white hover:bg-white/[0.08] hover:shadow-[0_0_14px_rgba(226,232,240,0.25)]'
+                    : 'hover:text-[#131B2E] hover:bg-slate-500/10 hover:shadow-[0_0_12px_rgba(71,85,105,0.22)]'
+                }`}
+                aria-label="GitHub"
+              >
+                <Github className="w-4 h-4 transition-transform duration-300" />
               </a>
-              <a href={PORTFOLIO_DATA.profile.socials.youtube} target="_blank" rel="noreferrer" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-red-600'}`} aria-label="YouTube">
-                <Youtube className="w-4 h-4" />
+              <a
+                href={PORTFOLIO_DATA.profile.socials.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className={`hover-social-glow p-2 rounded-lg transition-all duration-300 hover:scale-110 ${
+                  isDark
+                    ? 'hover:text-red-400 hover:bg-red-500/10 hover:shadow-[0_0_14px_rgba(248,113,113,0.3)]'
+                    : 'hover:text-red-600 hover:bg-red-500/10 hover:shadow-[0_0_12px_rgba(239,68,68,0.25)]'
+                }`}
+                aria-label="YouTube"
+              >
+                <Youtube className="w-4 h-4 transition-transform duration-300" />
               </a>
-              <a href={PORTFOLIO_DATA.profile.socials.instagram} target="_blank" rel="noreferrer" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-pink-600'}`} aria-label="Instagram">
-                <Instagram className="w-4 h-4" />
+              <a
+                href={PORTFOLIO_DATA.profile.socials.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className={`hover-social-glow p-2 rounded-lg transition-all duration-300 hover:scale-110 ${
+                  isDark
+                    ? 'hover:text-pink-400 hover:bg-pink-500/10 hover:shadow-[0_0_14px_rgba(244,114,182,0.3)]'
+                    : 'hover:text-pink-600 hover:bg-pink-500/10 hover:shadow-[0_0_12px_rgba(236,72,153,0.25)]'
+                }`}
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4 transition-transform duration-300" />
               </a>
             </div>
 
@@ -87,7 +127,7 @@ export const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Gokul C. All rights reserved.
           </div>
           <div>
-            Hyderabad, India
+            Puducherry, PY
           </div>
         </div>
 

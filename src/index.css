@@ -207,3 +207,18 @@ html.light ::-webkit-scrollbar-thumb:hover {
   width: 0;
   height: 0;
 }
+
+/* Subtle Social Icon Hover Glow Animation */
+@keyframes social-icon-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px color-mix(in srgb, currentColor 55%, transparent));
+  }
+  50% {
+    filter: drop-shadow(0 0 9px color-mix(in srgb, currentColor 85%, transparent));
+  }
+}
+
+.hover-social-glow:hover svg,
+.hover-social-glow:focus-visible svg {
+  animation: social-icon-glow 1.8s ease-in-out infinite;
+}

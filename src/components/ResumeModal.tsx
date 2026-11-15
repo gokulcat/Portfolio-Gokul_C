@@ -83,7 +83,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   const handleCopySummary = () => {
     const text = `Gokul C — Frontend Engineer (React & Angular Specialist)
 Experience: 4.5+ Years
-Location: Hyderabad, India
+Location: Puducherry, PY
 Email: ${PORTFOLIO_DATA.profile.email}
 GitHub: ${PORTFOLIO_DATA.profile.socials.github}
 LinkedIn: ${PORTFOLIO_DATA.profile.socials.linkedin}
@@ -220,7 +220,7 @@ Key Projects:
             }`}>
               <span>{PORTFOLIO_DATA.profile.email}</span>
               <span aria-hidden="true">·</span>
-              <span>Hyderabad, India · Open to Remote</span>
+              <span>Puducherry, PY · Open to Remote</span>
               <span aria-hidden="true">·</span>
               <a href={PORTFOLIO_DATA.profile.socials.linkedin} target="_blank" rel="noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">LinkedIn</a>
               <span aria-hidden="true">·</span>

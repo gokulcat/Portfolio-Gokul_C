@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
+import { ScrollProgressBar } from './components/ScrollProgressBar';
 import { Hero } from './components/Hero';
 import { MarqueeStrip } from './components/MarqueeStrip';
 import { SelectedProjects } from './components/SelectedProjects';
@@ -28,6 +29,9 @@ function PortfolioApp() {
     <div className={`min-h-screen transition-colors duration-300 ${
       isDark ? 'bg-[#08090E] text-[#E2E8F0]' : 'bg-[#FAF8FF] text-[#131B2E]'
     } selection:bg-sky-500 selection:text-white`}>
+      {/* Slim top reading scroll progress bar */}
+      <ScrollProgressBar />
+
       {/* Top Bar Navigation with Sun / Crescent Moon Theme Toggle */}
       <Navbar onOpenResume={() => setResumeOpen(true)} />
 

@@ -10,7 +10,8 @@ import {
   Check, 
   Download, 
   Code2, 
-  Sparkles
+  Sparkles,
+  MapPin
 } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
@@ -239,26 +240,29 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                       {/* Gradient overlay scrim for contrast */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
 
-                      {/* Floating bottom badge: Hyderabad / India */}
-                      <div className="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-black/80 backdrop-blur-md border border-white/[0.15] text-xs">
-                        <div className="flex justify-between items-center text-slate-200">
-                          <span className="font-semibold text-white">Gokul C</span>
-                          <span className="text-[11px] font-mono text-sky-300">Hyderabad / India</span>
+                      {/* Floating bottom badge: Puducherry, PY */}
+                      <div className="absolute bottom-3 left-3 right-3 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/80 backdrop-blur-md border border-white/[0.15] text-xs shadow-lg">
+                        <div className="flex items-center justify-between gap-2 text-slate-200">
+                          <span className="font-semibold text-white whitespace-nowrap shrink-0">Gokul C</span>
+                          <span className="inline-flex items-center gap-1 text-[11px] font-mono text-sky-300 whitespace-nowrap shrink-0">
+                            <MapPin className="w-3 h-3 shrink-0" />
+                            <span>Puducherry, PY</span>
+                          </span>
                         </div>
-                        <p className="text-[11px] text-slate-300 mt-0.5">Frontend Engineer · React & Angular Specialist</p>
+                        <p className="text-[11px] text-slate-300 mt-1 leading-snug">Frontend Engineer · React & Angular Specialist</p>
                       </div>
                     </div>
 
-                    <div className={`p-3 rounded-xl border text-xs flex items-center justify-between ${
+                    <div className={`p-3 rounded-xl border text-xs flex items-center justify-between gap-2 ${
                       isDark 
                         ? 'bg-white/[0.02] border-white/[0.05] text-slate-400' 
                         : 'bg-slate-50 border-slate-200 text-slate-700'
                     }`}>
-                      <div className="flex items-center gap-2">
-                        <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-                        <span className="font-medium">Specialized in React, Angular, Tailwind & Systems</span>
+                      <div className="flex items-center gap-2 min-w-0">
+                        <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                        <span className="font-medium truncate">Specialized in React, Angular, Tailwind & Systems</span>
                       </div>
-                      <span className="font-mono font-semibold">4.5+ Yrs</span>
+                      <span className="font-mono font-semibold whitespace-nowrap shrink-0">4.5+ Yrs</span>
                     </div>
                   </div>
                 ) : (

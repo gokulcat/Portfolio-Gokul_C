@@ -140,11 +140,11 @@ export const ContactSection: React.FC = () => {
                     href={PORTFOLIO_DATA.profile.socials.linkedin}
                     target="_blank"
                     rel="noreferrer"
-                    className={`p-3.5 rounded-xl border flex items-center gap-3 group transition-colors ${
+                    className={`hover-social-glow p-3.5 rounded-xl border flex items-center gap-3 group transition-all duration-300 hover:border-sky-500/40 hover:shadow-[0_0_20px_rgba(14,165,233,0.18)] ${
                       isDark ? 'glass-panel-interactive-dark' : 'glass-panel-interactive-light'
                     }`}
                   >
-                    <Linkedin className="w-4 h-4 text-sky-500 group-hover:scale-110 transition-transform" />
+                    <Linkedin className="w-4 h-4 text-sky-500 group-hover:scale-110 transition-all duration-300" />
                     <span className={`text-xs font-medium ${
                       isDark ? 'text-slate-300 group-hover:text-white' : 'text-slate-800 group-hover:text-sky-600'
                     }`}>
@@ -156,11 +156,11 @@ export const ContactSection: React.FC = () => {
                     href={PORTFOLIO_DATA.profile.socials.github}
                     target="_blank"
                     rel="noreferrer"
-                    className={`p-3.5 rounded-xl border flex items-center gap-3 group transition-colors ${
+                    className={`hover-social-glow p-3.5 rounded-xl border flex items-center gap-3 group transition-all duration-300 hover:border-slate-400/40 hover:shadow-[0_0_20px_rgba(148,163,184,0.18)] ${
                       isDark ? 'glass-panel-interactive-dark' : 'glass-panel-interactive-light'
                     }`}
                   >
-                    <Github className="w-4 h-4 text-slate-500 group-hover:scale-110 transition-transform" />
+                    <Github className="w-4 h-4 text-slate-500 dark:text-slate-300 group-hover:scale-110 transition-all duration-300" />
                     <span className={`text-xs font-medium ${
                       isDark ? 'text-slate-300 group-hover:text-white' : 'text-slate-800 group-hover:text-[#131B2E]'
                     }`}>
@@ -172,11 +172,11 @@ export const ContactSection: React.FC = () => {
                     href={PORTFOLIO_DATA.profile.socials.youtube}
                     target="_blank"
                     rel="noreferrer"
-                    className={`p-3.5 rounded-xl border flex items-center gap-3 group transition-colors ${
+                    className={`hover-social-glow p-3.5 rounded-xl border flex items-center gap-3 group transition-all duration-300 hover:border-red-500/40 hover:shadow-[0_0_20px_rgba(239,68,68,0.18)] ${
                       isDark ? 'glass-panel-interactive-dark' : 'glass-panel-interactive-light'
                     }`}
                   >
-                    <Youtube className="w-4 h-4 text-red-500 group-hover:scale-110 transition-transform" />
+                    <Youtube className="w-4 h-4 text-red-500 group-hover:scale-110 transition-all duration-300" />
                     <span className={`text-xs font-medium ${
                       isDark ? 'text-slate-300 group-hover:text-white' : 'text-slate-800 group-hover:text-red-600'
                     }`}>
@@ -188,11 +188,11 @@ export const ContactSection: React.FC = () => {
                     href={PORTFOLIO_DATA.profile.socials.instagram}
                     target="_blank"
                     rel="noreferrer"
-                    className={`p-3.5 rounded-xl border flex items-center gap-3 group transition-colors ${
+                    className={`hover-social-glow p-3.5 rounded-xl border flex items-center gap-3 group transition-all duration-300 hover:border-pink-500/40 hover:shadow-[0_0_20px_rgba(236,72,153,0.18)] ${
                       isDark ? 'glass-panel-interactive-dark' : 'glass-panel-interactive-light'
                     }`}
                   >
-                    <Instagram className="w-4 h-4 text-pink-500 group-hover:scale-110 transition-transform" />
+                    <Instagram className="w-4 h-4 text-pink-500 group-hover:scale-110 transition-all duration-300" />
                     <span className={`text-xs font-medium ${
                       isDark ? 'text-slate-300 group-hover:text-white' : 'text-slate-800 group-hover:text-pink-600'
                     }`}>
@@ -207,7 +207,7 @@ export const ContactSection: React.FC = () => {
               isDark ? 'bg-white/[0.02] border-white/[0.06] text-slate-400' : 'bg-white border-slate-200 text-slate-700 shadow-xs'
             }`}>
               <MapPin className="w-4 h-4 text-sky-500 shrink-0" />
-              <span>Based in Hyderabad, India · Collaborating worldwide across all time zones</span>
+              <span>Based in Puducherry, PY · Collaborating worldwide across all time zones</span>
             </div>
           </div>
 
