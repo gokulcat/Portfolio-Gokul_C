@@ -46,7 +46,7 @@ export const ContactSection: React.FC = () => {
     }`}>
       {/* Ambient background glow */}
       <div className={`absolute bottom-0 right-1/4 w-96 h-96 blur-[130px] pointer-events-none rounded-full ${
-        isDark ? 'bg-indigo-600/10' : 'bg-indigo-300/20'
+        isDark ? 'bg-sky-600/10' : 'bg-sky-300/20'
       }`} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -54,7 +54,7 @@ export const ContactSection: React.FC = () => {
         {/* Section Header */}
         <div className="mb-14">
           <div className={`flex items-center gap-2 text-xs font-mono uppercase tracking-widest mb-2 font-semibold ${
-            isDark ? 'text-indigo-400' : 'text-indigo-600'
+            isDark ? 'text-sky-400' : 'text-sky-600'
           }`}>
             <span>Direct Channels</span>
             <span aria-hidden="true">·</span>
@@ -119,7 +119,7 @@ export const ContactSection: React.FC = () => {
 
                   <a
                     href={`mailto:${PORTFOLIO_DATA.profile.email}`}
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-semibold text-white transition-colors shadow-sm"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-xs font-semibold text-white transition-colors shadow-sm"
                   >
                     <Mail className="w-3.5 h-3.5" />
                     <span>Open Mail Client</span>
@@ -144,9 +144,9 @@ export const ContactSection: React.FC = () => {
                       isDark ? 'glass-panel-interactive-dark' : 'glass-panel-interactive-light'
                     }`}
                   >
-                    <Linkedin className="w-4 h-4 text-indigo-500 group-hover:scale-110 transition-transform" />
+                    <Linkedin className="w-4 h-4 text-sky-500 group-hover:scale-110 transition-transform" />
                     <span className={`text-xs font-medium ${
-                      isDark ? 'text-slate-300 group-hover:text-white' : 'text-slate-800 group-hover:text-indigo-600'
+                      isDark ? 'text-slate-300 group-hover:text-white' : 'text-slate-800 group-hover:text-sky-600'
                     }`}>
                       LinkedIn
                     </span>
@@ -206,7 +206,7 @@ export const ContactSection: React.FC = () => {
             <div className={`p-4 rounded-xl border text-xs flex items-center gap-2 ${
               isDark ? 'bg-white/[0.02] border-white/[0.06] text-slate-400' : 'bg-white border-slate-200 text-slate-700 shadow-xs'
             }`}>
-              <MapPin className="w-4 h-4 text-indigo-500 shrink-0" />
+              <MapPin className="w-4 h-4 text-sky-500 shrink-0" />
               <span>Based in Hyderabad, India · Collaborating worldwide across all time zones</span>
             </div>
           </div>
@@ -258,8 +258,8 @@ export const ContactSection: React.FC = () => {
                         placeholder="e.g. Sarah Jenkins"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none ${
                           isDark 
-                            ? 'bg-[#0F121C] border-white/[0.08] focus:border-indigo-500 text-white placeholder-slate-500' 
-                            : 'bg-white border-slate-300 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 text-slate-900 placeholder-slate-400 shadow-xs'
+                            ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500' 
+                            : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
                         }`}
                       />
                     </div>
@@ -279,8 +279,8 @@ export const ContactSection: React.FC = () => {
                         placeholder="s.jenkins@company.com"
                         className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none ${
                           isDark 
-                            ? 'bg-[#0F121C] border-white/[0.08] focus:border-indigo-500 text-white placeholder-slate-500' 
-                            : 'bg-white border-slate-300 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 text-slate-900 placeholder-slate-400 shadow-xs'
+                            ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500' 
+                            : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
                         }`}
                       />
                     </div>
@@ -300,8 +300,8 @@ export const ContactSection: React.FC = () => {
                       placeholder="Frontend Opportunity (React / Angular) / Collaboration"
                       className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none ${
                         isDark 
-                          ? 'bg-[#0F121C] border-white/[0.08] focus:border-indigo-500 text-white placeholder-slate-500' 
-                            : 'bg-white border-slate-300 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 text-slate-900 placeholder-slate-400 shadow-xs'
+                          ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500' 
+                            : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
                       }`}
                     />
                   </div>
@@ -321,8 +321,8 @@ export const ContactSection: React.FC = () => {
                       placeholder="Hi Gokul, I saw your work on Role-Based Access Control and WealthWise..."
                       className={`w-full px-4 py-3 rounded-xl border text-sm transition-colors focus:outline-none resize-y ${
                         isDark 
-                          ? 'bg-[#0F121C] border-white/[0.08] focus:border-indigo-500 text-white placeholder-slate-500' 
-                          : 'bg-white border-slate-300 focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 text-slate-900 placeholder-slate-400 shadow-xs'
+                          ? 'bg-[#0F121C] border-white/[0.08] focus:border-sky-500 text-white placeholder-slate-500' 
+                          : 'bg-white border-slate-300 focus:border-sky-600 focus:ring-1 focus:ring-sky-600 text-slate-900 placeholder-slate-400 shadow-xs'
                       }`}
                     ></textarea>
                   </div>
@@ -330,7 +330,7 @@ export const ContactSection: React.FC = () => {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full py-3.5 px-6 rounded-xl font-semibold text-sm text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-indigo-600/25 cursor-pointer disabled:opacity-50"
+                    className="w-full py-3.5 px-6 rounded-xl font-semibold text-sm text-white bg-sky-600 hover:bg-sky-500 active:bg-sky-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-sky-600/25 cursor-pointer disabled:opacity-50"
                   >
                     {status === 'submitting' ? (
                       <span className="text-xs font-mono">Transmitting Message...</span>

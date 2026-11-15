@@ -17,7 +17,7 @@ export const ExperienceTimeline: React.FC = () => {
         {/* Section Header */}
         <div className="mb-14">
           <div className={`flex items-center gap-2 text-xs font-mono uppercase tracking-widest mb-2 font-semibold ${
-            isDark ? 'text-indigo-400' : 'text-indigo-600'
+            isDark ? 'text-sky-400' : 'text-sky-600'
           }`}>
             <span>Career Progression</span>
             <span aria-hidden="true">·</span>
@@ -42,7 +42,7 @@ export const ExperienceTimeline: React.FC = () => {
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
                 <div>
                   <div className={`flex items-center gap-2 text-xs font-mono mb-1 font-semibold ${
-                    isDark ? 'text-indigo-400' : 'text-indigo-600'
+                    isDark ? 'text-sky-400' : 'text-sky-600'
                   }`}>
                     <Calendar className="w-3.5 h-3.5" />
                     <span>{item.period}</span>

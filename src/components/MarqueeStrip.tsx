@@ -22,10 +22,10 @@ export const MarqueeStrip: React.FC = () => {
       <div className="animate-marquee flex items-center gap-10 whitespace-nowrap">
         {seamlessList.map((item, index) => (
           <div key={index} className={`flex items-center gap-10 text-xs sm:text-sm font-mono tracking-widest font-semibold transition-colors ${
-            isDark ? 'text-slate-400 hover:text-indigo-400' : 'text-slate-700 hover:text-indigo-600'
+            isDark ? 'text-slate-400 hover:text-sky-400' : 'text-slate-700 hover:text-sky-600'
           }`}>
             <span className="uppercase">{item}</span>
-            <span className="text-indigo-500 text-xs" aria-hidden="true">✦</span>
+            <span className="text-sky-500 text-xs" aria-hidden="true">✦</span>
           </div>
         ))}
       </div>

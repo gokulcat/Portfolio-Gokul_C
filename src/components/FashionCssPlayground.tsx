@@ -161,7 +161,7 @@ export const FashionCssPlayground: React.FC = () => {
               ? 'bg-slate-900 ring-white/10 text-white'
               : 'bg-white ring-slate-900/5 text-slate-900'
           } dark:bg-slate-900 dark:ring-white/10">
-  <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
+  <span class="inline-flex items-center justify-center rounded-md bg-sky-500 p-2 shadow-lg">
     <svg class="h-5 w-5 text-white" ... />
   </span>
   <h3 class="mt-5 text-base font-semibold tracking-tight text-slate-900 dark:text-white">
@@ -231,8 +231,8 @@ export const FashionCssPlayground: React.FC = () => {
         aria-hidden="true"
         className={`pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[360px] blur-3xl opacity-25 ${
           isDark
-            ? 'bg-gradient-to-tr from-sky-500/30 via-indigo-500/20 to-transparent'
-            : 'bg-gradient-to-tr from-sky-300/40 via-indigo-200/30 to-transparent'
+            ? 'bg-gradient-to-tr from-sky-500/30 via-cyan-500/20 to-transparent'
+            : 'bg-gradient-to-tr from-sky-300/40 via-cyan-200/30 to-transparent'
         }`}
       />
 
@@ -408,7 +408,7 @@ export const FashionCssPlayground: React.FC = () => {
                     onClick={() => setPreviewDark((prev) => !prev)}
                     className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-md font-semibold transition-colors cursor-pointer ${
                       previewDark
-                        ? 'bg-indigo-500 text-white'
+                        ? 'bg-sky-500 text-white'
                         : 'bg-amber-400 text-slate-950'
                     }`}
                   >
@@ -500,7 +500,7 @@ export const FashionCssPlayground: React.FC = () => {
               >
                 <div className={`flex ${viewport === 'mobile' ? 'flex-col' : 'flex-col sm:flex-row'}`}>
                   <div
-                    className={`flex items-center justify-center bg-gradient-to-br from-sky-500 to-indigo-600 text-white ${
+                    className={`flex items-center justify-center bg-gradient-to-br from-sky-500 to-cyan-600 text-white ${
                       viewport === 'mobile' ? 'h-28 w-full' : 'sm:w-36 shrink-0 min-h-[160px]'
                     }`}
                   >
@@ -538,7 +538,7 @@ export const FashionCssPlayground: React.FC = () => {
                     : 'bg-white ring-slate-900/5 text-slate-900'
                 }`}
               >
-                <span className="inline-flex items-center justify-center rounded-lg bg-indigo-500 p-2.5 shadow-lg shadow-indigo-500/30 text-white">
+                <span className="inline-flex items-center justify-center rounded-lg bg-sky-500 p-2.5 shadow-lg shadow-sky-500/30 text-white">
                   {cardIsDark ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
                 </span>
                 <h4
@@ -553,7 +553,7 @@ export const FashionCssPlayground: React.FC = () => {
                     cardIsDark ? 'text-slate-400' : 'text-slate-600'
                   }`}
                 >
-                  The Zero Gravity Pen can be used to write in any orientation, including upside-down. Styled purely with <code className="font-mono text-indigo-400">dark:</code> variants.
+                  The Zero Gravity Pen can be used to write in any orientation, including upside-down. Styled purely with <code className="font-mono text-sky-400">dark:</code> variants.
                 </p>
               </div>
             )}

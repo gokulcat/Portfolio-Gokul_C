@@ -76,11 +76,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
             <a
               href="#"
               className={`text-base font-bold tracking-tight whitespace-nowrap shrink-0 transition-colors flex items-center gap-2 group ${
-                isDark ? 'text-white hover:text-indigo-400' : 'text-[#131B2E] hover:text-indigo-600'
+                isDark ? 'text-white hover:text-sky-400' : 'text-[#131B2E] hover:text-sky-600'
               }`}
             >
               <span className="font-display font-black tracking-tighter text-lg">Gokul C</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 group-hover:scale-150 transition-transform"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-sky-500 group-hover:scale-150 transition-transform"></span>
             </a>
 
             {/* Zone 2: Clean single-line text navigation links */}
@@ -91,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className={`transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-indigo-600 hover:after:w-full after:transition-all after:duration-200 whitespace-nowrap shrink-0 ${
+                  className={`transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-sky-600 hover:after:w-full after:transition-all after:duration-200 whitespace-nowrap shrink-0 ${
                     isDark ? 'hover:text-white' : 'hover:text-[#131B2E] hover:font-semibold'
                   }`}
                 >
@@ -115,12 +115,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                     isDark
                       ? 'bg-white/[0.08] hover:bg-white/[0.14] border-white/[0.14] text-slate-200 hover:text-white'
                       : 'bg-slate-100 hover:bg-slate-200/90 border-slate-300 text-slate-800 shadow-xs'
-                  } ${themeDropdownOpen ? (isDark ? 'ring-2 ring-indigo-500/50' : 'ring-2 ring-indigo-400') : ''}`}
+                  } ${themeDropdownOpen ? (isDark ? 'ring-2 ring-sky-500/50' : 'ring-2 ring-sky-400') : ''}`}
                 >
                   {/* Current Active Icon */}
                   {isDark ? (
                     <div className="flex items-center gap-1.5">
-                      <Moon className="w-4 h-4 text-indigo-400" />
+                      <Moon className="w-4 h-4 text-sky-400" />
                       <span className="hidden sm:inline">Dark</span>
                     </div>
                   ) : (
@@ -177,7 +177,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                         <span className={`font-semibold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>Light</span>
                         <span className={`text-[10px] ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Crisp high contrast</span>
                       </div>
-                      {!isDark && <Check className="w-4 h-4 ml-auto text-indigo-600" />}
+                      {!isDark && <Check className="w-4 h-4 ml-auto text-sky-600" />}
                     </button>
 
                     {/* Dark Option with Crescent Moon Logo */}
@@ -191,12 +191,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                       }}
                       className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer mt-1 ${
                         isDark
-                          ? 'bg-indigo-600/20 text-indigo-300 font-semibold border border-indigo-500/30'
+                          ? 'bg-sky-600/20 text-sky-300 font-semibold border border-sky-500/30'
                           : 'text-slate-700 hover:text-slate-950 hover:bg-slate-100'
                       }`}
                     >
                       <div className={`p-1 rounded-md ${
-                        isDark ? 'bg-indigo-500/20 text-indigo-400' : 'bg-slate-200 text-indigo-600'
+                        isDark ? 'bg-sky-500/20 text-sky-400' : 'bg-slate-200 text-sky-600'
                       }`}>
                         <Moon className="w-3.5 h-3.5" />
                       </div>
@@ -204,7 +204,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                         <span className={`font-semibold ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>Dark</span>
                         <span className={`text-[10px] ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>Deep obsidian & neon</span>
                       </div>
-                      {isDark && <Check className="w-4 h-4 ml-auto text-indigo-400" />}
+                      {isDark && <Check className="w-4 h-4 ml-auto text-sky-400" />}
                     </button>
                   </div>
                 )}
@@ -226,7 +226,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
               {/* Primary CTA */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg transition-colors shadow-lg shadow-indigo-600/20 whitespace-nowrap shrink-0"
+                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-1.5 sm:py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 active:bg-sky-700 rounded-lg transition-colors shadow-lg shadow-sky-600/20 whitespace-nowrap shrink-0"
               >
                 <span>Get in Touch</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -280,7 +280,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 className={`hover:translate-x-2 transition-transform py-2 border-b ${
                   isDark 
                     ? 'hover:text-white border-white/[0.06]' 
-                    : 'hover:text-indigo-600 border-slate-200'
+                    : 'hover:text-sky-600 border-slate-200'
                 }`}
               >
                 {link.label}
@@ -291,7 +291,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 setMobileMenuOpen(false);
                 onOpenResume();
               }}
-              className="flex items-center gap-2 py-2 text-left text-indigo-600 dark:text-indigo-400 font-semibold"
+              className="flex items-center gap-2 py-2 text-left text-sky-600 dark:text-sky-400 font-semibold"
             >
               <FileText className="w-4 h-4" />
               <span>View Curriculum Vitae</span>
@@ -321,7 +321,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 <div className="flex items-center gap-2.5">
                   {isDark ? (
                     <>
-                      <Moon className="w-4 h-4 text-indigo-400" />
+                      <Moon className="w-4 h-4 text-sky-400" />
                       <span>Dark Theme (Crescent)</span>
                     </>
                   ) : (
@@ -349,7 +349,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                   >
                     <Sun className="w-4 h-4 text-amber-500" />
                     <span>Light Mode (Sun)</span>
-                    {!isDark && <Check className="w-4 h-4 ml-auto text-indigo-600" />}
+                    {!isDark && <Check className="w-4 h-4 ml-auto text-sky-600" />}
                   </button>
                   <button
                     onClick={() => {
@@ -357,12 +357,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                       setMobileThemeDropdownOpen(false);
                     }}
                     className={`w-full flex items-center gap-3 p-2.5 rounded-lg text-sm mt-1 ${
-                      isDark ? 'bg-indigo-600/20 text-indigo-300 font-semibold' : 'text-slate-700 hover:bg-slate-100'
+                      isDark ? 'bg-sky-600/20 text-sky-300 font-semibold' : 'text-slate-700 hover:bg-slate-100'
                     }`}
                   >
-                    <Moon className="w-4 h-4 text-indigo-400" />
+                    <Moon className="w-4 h-4 text-sky-400" />
                     <span>Dark Mode (Crescent)</span>
-                    {isDark && <Check className="w-4 h-4 ml-auto text-indigo-400" />}
+                    {isDark && <Check className="w-4 h-4 ml-auto text-sky-400" />}
                   </button>
                 </div>
               )}
@@ -371,7 +371,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-3 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-500 shadow-md shadow-indigo-600/20"
+              className="w-full text-center py-3 rounded-xl bg-sky-600 text-white font-medium hover:bg-sky-500 shadow-md shadow-sky-600/20"
             >
               Get in Touch
             </a>

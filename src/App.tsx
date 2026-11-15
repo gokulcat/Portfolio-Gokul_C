@@ -27,7 +27,7 @@ function PortfolioApp() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${
       isDark ? 'bg-[#08090E] text-[#E2E8F0]' : 'bg-[#FAF8FF] text-[#131B2E]'
-    } selection:bg-indigo-600 selection:text-white`}>
+    } selection:bg-sky-500 selection:text-white`}>
       {/* Top Bar Navigation with Sun / Crescent Moon Theme Toggle */}
       <Navbar onOpenResume={() => setResumeOpen(true)} />
 

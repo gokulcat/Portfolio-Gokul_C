@@ -48,7 +48,7 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <div className={`flex items-center gap-2 text-xs font-mono uppercase tracking-widest mb-2 font-semibold ${
-              isDark ? 'text-indigo-400' : 'text-indigo-600'
+              isDark ? 'text-sky-400' : 'text-sky-600'
             }`}>
               <Sparkles className="w-3.5 h-3.5" />
               <span>Selected Portfolio Works</span>
@@ -75,7 +75,7 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
                 }`}
               >
                 <div className="flex items-center gap-2">
-                  <Filter className="w-3.5 h-3.5 text-indigo-500" />
+                  <Filter className="w-3.5 h-3.5 text-sky-500" />
                   <span className="truncate">{currentCategoryLabel}</span>
                 </div>
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${
@@ -103,7 +103,7 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
                       }}
                       className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                         activeCategory === cat.id
-                          ? 'bg-indigo-600 text-white font-semibold'
+                          ? 'bg-sky-600 text-white font-semibold'
                           : isDark
                             ? 'text-slate-300 hover:text-white hover:bg-white/[0.06]'
                             : 'text-slate-700 hover:text-slate-950 hover:bg-slate-100'
@@ -129,7 +129,7 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-3.5 py-1.5 text-xs font-medium rounded-lg transition-all duration-200 whitespace-nowrap cursor-pointer ${
                     activeCategory === cat.id
-                      ? 'bg-indigo-600 text-white shadow-md font-semibold'
+                      ? 'bg-sky-600 text-white shadow-md font-semibold'
                       : isDark 
                         ? 'text-slate-400 hover:text-white hover:bg-white/[0.04]' 
                         : 'text-slate-700 hover:text-[#131B2E] hover:bg-white/90'
@@ -155,8 +155,8 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
                   isWide ? 'lg:col-span-12' : 'lg:col-span-6'
                 } group rounded-3xl overflow-hidden flex flex-col justify-between transition-all duration-300 ${
                   isDark 
-                    ? 'glass-panel-interactive-dark hover:border-white/[0.2] hover:shadow-2xl hover:shadow-indigo-950/40' 
-                    : 'glass-panel-interactive-light hover:border-slate-300 hover:shadow-xl hover:shadow-indigo-900/10'
+                    ? 'glass-panel-interactive-dark hover:border-white/[0.2] hover:shadow-2xl hover:shadow-sky-950/40' 
+                    : 'glass-panel-interactive-light hover:border-slate-300 hover:shadow-xl hover:shadow-sky-900/10'
                 }`}
               >
                 {/* Project Media Container */}
@@ -176,12 +176,12 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
                       target.style.display = 'none';
                       const parent = target.parentElement;
                       if (parent) {
-                        parent.classList.add('flex', 'items-center', 'justify-center', 'bg-gradient-to-br', 'from-slate-900', 'to-indigo-950');
+                        parent.classList.add('flex', 'items-center', 'justify-center', 'bg-gradient-to-br', 'from-slate-900', 'to-sky-950');
                         const fb = document.createElement('div');
                         fb.className = 'text-center p-6 text-white';
                         fb.innerHTML = `
                           <div class="font-display font-bold text-lg mb-1">${project.title}</div>
-                          <div class="text-xs text-indigo-300 font-mono">View Case Study</div>
+                          <div class="text-xs text-sky-300 font-mono">View Case Study</div>
                         `;
                         parent.appendChild(fb);
                       }
@@ -201,7 +201,7 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
                         e.stopPropagation();
                         onSelectProject(project);
                       }}
-                      className="p-2 rounded-xl bg-black/75 backdrop-blur-md text-white border border-white/[0.2] hover:bg-indigo-600 transition-colors cursor-pointer"
+                      className="p-2 rounded-xl bg-black/75 backdrop-blur-md text-white border border-white/[0.2] hover:bg-sky-600 transition-colors cursor-pointer"
                       title="Open Case Study"
                       aria-label={`Open Case Study for ${project.title}`}
                     >
@@ -226,8 +226,8 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
 
                     <h3 className={`text-2xl font-display font-bold mb-3 transition-colors ${
                       isDark 
-                        ? 'text-white group-hover:text-indigo-300' 
-                        : 'text-[#131B2E] group-hover:text-indigo-600'
+                        ? 'text-white group-hover:text-sky-300' 
+                        : 'text-[#131B2E] group-hover:text-sky-600'
                     }`}>
                       {project.title}
                     </h3>
@@ -246,7 +246,7 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
                     <button
                       onClick={() => onSelectProject(project)}
                       className={`inline-flex items-center gap-2 text-xs font-semibold transition-colors cursor-pointer group/link ${
-                        isDark ? 'text-indigo-400 hover:text-indigo-300' : 'text-indigo-600 hover:text-indigo-800'
+                        isDark ? 'text-sky-400 hover:text-sky-300' : 'text-sky-600 hover:text-sky-800'
                       }`}
                     >
                       <span>Read Deep-Dive Case Study</span>
@@ -272,7 +272,7 @@ export const SelectedProjects: React.FC<SelectedProjectsProps> = ({ onSelectProj
                         href={project.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-colors shadow-md shadow-indigo-600/20"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg transition-colors shadow-md shadow-sky-600/20"
                         title="Open Live Deployment"
                       >
                         <span>Live Demo</span>

@@ -12,7 +12,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
 
   const pillars = [
     {
-      icon: <Laptop className="w-5 h-5 text-indigo-500" />,
+      icon: <Laptop className="w-5 h-5 text-sky-500" />,
       title: "Design-to-Code Fidelity",
       desc: "Transforming high-fidelity Figma mockups into reactive, accessible DOM structures with React and Angular with zero design compromise."
     },
@@ -42,7 +42,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
         {/* Section Header */}
         <div className="mb-14">
           <div className={`flex items-center gap-2 text-xs font-mono uppercase tracking-widest mb-2 font-semibold ${
-            isDark ? 'text-indigo-400' : 'text-indigo-600'
+            isDark ? 'text-sky-400' : 'text-sky-600'
           }`}>
             <span>Philosophy & Background</span>
             <span aria-hidden="true">·</span>
@@ -76,7 +76,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
               isDark ? 'glass-panel-dark border-white/[0.08]' : 'glass-panel-light border-slate-200'
             }`}>
               <div className={`text-xs font-mono uppercase tracking-wider mb-2 font-semibold ${
-                isDark ? 'text-indigo-400' : 'text-indigo-600'
+                isDark ? 'text-sky-400' : 'text-sky-600'
               }`}>
                 Guiding Mantra
               </div>
@@ -90,7 +90,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenResume }) => {
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <button
                 onClick={onOpenResume}
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 transition-colors shadow-lg shadow-indigo-600/20 cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-white bg-sky-600 hover:bg-sky-500 transition-colors shadow-lg shadow-sky-600/20 cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
                 <span>View Full Curriculum Vitae</span>

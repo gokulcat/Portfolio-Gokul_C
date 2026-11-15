@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
             <div className={`flex items-center gap-3 ${
               isDark ? 'text-slate-400' : 'text-slate-600'
             }`}>
-              <a href={PORTFOLIO_DATA.profile.socials.linkedin} target="_blank" rel="noreferrer" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-indigo-600'}`} aria-label="LinkedIn">
+              <a href={PORTFOLIO_DATA.profile.socials.linkedin} target="_blank" rel="noreferrer" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-sky-600'}`} aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4" />
               </a>
               <a href={PORTFOLIO_DATA.profile.socials.github} target="_blank" rel="noreferrer" className={`transition-colors ${isDark ? 'hover:text-white' : 'hover:text-[#131B2E]'}`} aria-label="GitHub">

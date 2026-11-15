@@ -164,7 +164,7 @@ Key Projects:
 
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-xs font-semibold text-white transition-colors shadow-sm cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-xs font-semibold text-white transition-colors shadow-sm cursor-pointer whitespace-nowrap"
               title="Print or Save PDF"
             >
               <Printer className="w-3.5 h-3.5" />
@@ -211,7 +211,7 @@ Key Projects:
             }`}>
               Gokul C
             </h1>
-            <p className="text-indigo-600 dark:text-indigo-400 font-semibold text-sm mt-1">
+            <p className="text-sky-600 dark:text-sky-400 font-semibold text-sm mt-1">
               Frontend Engineer (React & Angular Specialist) · 4.5+ Years Exp
             </p>
             
@@ -222,16 +222,16 @@ Key Projects:
               <span aria-hidden="true">·</span>
               <span>Hyderabad, India · Open to Remote</span>
               <span aria-hidden="true">·</span>
-              <a href={PORTFOLIO_DATA.profile.socials.linkedin} target="_blank" rel="noreferrer" className="text-indigo-600 dark:text-indigo-400 hover:underline">LinkedIn</a>
+              <a href={PORTFOLIO_DATA.profile.socials.linkedin} target="_blank" rel="noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">LinkedIn</a>
               <span aria-hidden="true">·</span>
-              <a href={PORTFOLIO_DATA.profile.socials.github} target="_blank" rel="noreferrer" className="text-indigo-600 dark:text-indigo-400 hover:underline">GitHub</a>
+              <a href={PORTFOLIO_DATA.profile.socials.github} target="_blank" rel="noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline">GitHub</a>
             </div>
           </div>
 
           {/* Professional Summary */}
           <div className="space-y-2">
             <h2 className={`text-xs font-mono uppercase tracking-widest pb-1 border-b font-semibold ${
-              isDark ? 'text-indigo-400 border-white/[0.06]' : 'text-indigo-600 border-slate-200'
+              isDark ? 'text-sky-400 border-white/[0.06]' : 'text-sky-600 border-slate-200'
             }`}>
               Professional Summary
             </h2>
@@ -245,7 +245,7 @@ Key Projects:
           {/* Core Technical Toolkit */}
           <div className="space-y-3">
             <h2 className={`text-xs font-mono uppercase tracking-widest pb-1 border-b font-semibold ${
-              isDark ? 'text-indigo-400 border-white/[0.06]' : 'text-indigo-600 border-slate-200'
+              isDark ? 'text-sky-400 border-white/[0.06]' : 'text-sky-600 border-slate-200'
             }`}>
               Technical Proficiencies
             </h2>
@@ -272,7 +272,7 @@ Key Projects:
           {/* Featured Projects */}
           <div className="space-y-4">
             <h2 className={`text-xs font-mono uppercase tracking-widest pb-1 border-b font-semibold ${
-              isDark ? 'text-indigo-400 border-white/[0.06]' : 'text-indigo-600 border-slate-200'
+              isDark ? 'text-sky-400 border-white/[0.06]' : 'text-sky-600 border-slate-200'
             }`}>
               Featured Production Projects
             </h2>
@@ -283,7 +283,7 @@ Key Projects:
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <h3 className={`text-sm font-bold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>{proj.title}</h3>
                   <div className="flex items-center gap-3 text-xs font-mono font-medium">
-                    <a href={proj.liveUrl} target="_blank" rel="noreferrer" className="text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1">
+                    <a href={proj.liveUrl} target="_blank" rel="noreferrer" className="text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
                       Live <ExternalLink className="w-3 h-3" />
                     </a>
                     <a href={proj.codeUrl} target="_blank" rel="noreferrer" className={`hover:underline flex items-center gap-1 ${isDark ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-[#131B2E]'}`}>
@@ -302,7 +302,7 @@ Key Projects:
           {/* Career Trajectory */}
           <div className="space-y-4">
             <h2 className={`text-xs font-mono uppercase tracking-widest pb-1 border-b font-semibold ${
-              isDark ? 'text-indigo-400 border-white/[0.06]' : 'text-indigo-600 border-slate-200'
+              isDark ? 'text-sky-400 border-white/[0.06]' : 'text-sky-600 border-slate-200'
             }`}>
               Milestone Progression
             </h2>
@@ -310,7 +310,7 @@ Key Projects:
               <div key={exp.period} className="space-y-1">
                 <div className="flex flex-wrap items-center justify-between gap-2">
                   <div className={`text-sm font-bold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>
-                    {exp.role} <span className="text-xs font-normal text-indigo-600 dark:text-indigo-400">· {exp.company}</span>
+                    {exp.role} <span className="text-xs font-normal text-sky-600 dark:text-sky-400">· {exp.company}</span>
                   </div>
                   <span className={`text-xs font-mono ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{exp.period}</span>
                 </div>

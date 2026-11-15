@@ -38,10 +38,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
     }`}>
       {/* Ambient background glow orbs */}
       <div className={`absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] blur-[120px] pointer-events-none rounded-full ${
-        isDark ? 'bg-gradient-to-tr from-indigo-600/15 via-purple-600/10 to-pink-500/5' : 'bg-gradient-to-tr from-indigo-500/10 via-purple-400/10 to-blue-300/15'
+        isDark ? 'bg-gradient-to-tr from-sky-500/15 via-cyan-500/10 to-sky-400/5' : 'bg-gradient-to-tr from-sky-400/15 via-cyan-300/10 to-sky-200/20'
       }`} />
       <div className={`absolute top-20 right-10 w-72 h-72 blur-[90px] pointer-events-none rounded-full ${
-        isDark ? 'bg-blue-500/10' : 'bg-indigo-300/20'
+        isDark ? 'bg-sky-500/10' : 'bg-sky-300/20'
       }`} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -53,7 +53,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
             
             {/* Unboxed editorial kicker */}
             <div className={`flex items-center gap-2 text-xs font-mono uppercase tracking-widest mb-4 font-semibold ${
-              isDark ? 'text-indigo-400' : 'text-indigo-600'
+              isDark ? 'text-sky-400' : 'text-sky-600'
             }`}>
               <span>Frontend Engineer</span>
               <span aria-hidden="true">·</span>
@@ -73,14 +73,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
             <p className={`text-base sm:text-lg font-normal leading-relaxed mb-8 max-w-2xl ${
               isDark ? 'text-slate-300' : 'text-slate-700'
             }`}>
-              A passionate <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>Frontend Engineer</span> with <span className={`font-semibold ${isDark ? 'text-indigo-400' : 'text-indigo-600'}`}>4.5+ years</span> of experience engineering high-performance web applications across <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>React</span> and <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>Angular</span>. Dedicated to clean architecture, intuitive interactions, and seamless design-to-code execution.
+              A passionate <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>Frontend Engineer</span> with <span className={`font-semibold ${isDark ? 'text-sky-400' : 'text-sky-600'}`}>4.5+ years</span> of experience engineering high-performance web applications across <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>React</span> and <span className={`font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>Angular</span>. Dedicated to clean architecture, intuitive interactions, and seamless design-to-code execution.
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <button
                 onClick={onExploreProjects}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-medium text-sm text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 transition-all duration-200 shadow-xl shadow-indigo-600/25 group cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-medium text-sm text-white bg-sky-600 hover:bg-sky-500 active:bg-sky-700 transition-all duration-200 shadow-xl shadow-sky-600/25 group cursor-pointer"
               >
                 <span>Explore Selected Works</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -130,7 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                   target="_blank"
                   rel="noreferrer"
                   className={`p-2 rounded-lg transition-colors ${
-                    isDark ? 'hover:text-white hover:bg-white/[0.06]' : 'hover:text-indigo-600 hover:bg-slate-100'
+                    isDark ? 'hover:text-white hover:bg-white/[0.06]' : 'hover:text-sky-600 hover:bg-slate-100'
                   }`}
                   aria-label="Gokul C LinkedIn Profile"
                 >
@@ -172,7 +172,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                 <a
                   href={PORTFOLIO_DATA.profile.socials.email}
                   className={`p-2 rounded-lg transition-colors ${
-                    isDark ? 'hover:text-white hover:bg-white/[0.06]' : 'hover:text-indigo-600 hover:bg-slate-100'
+                    isDark ? 'hover:text-white hover:bg-white/[0.06]' : 'hover:text-sky-600 hover:bg-slate-100'
                   }`}
                   aria-label="Email Gokul C"
                 >
@@ -189,8 +189,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
               {/* Outer decorative glow frame */}
               <div className={`absolute -inset-1.5 rounded-3xl blur-xl transition duration-1000 ${
                 isDark 
-                  ? 'bg-gradient-to-r from-indigo-500/30 via-purple-500/20 to-pink-500/30 opacity-60' 
-                  : 'bg-gradient-to-r from-indigo-300/40 via-purple-300/30 to-pink-300/30 opacity-70'
+                  ? 'bg-gradient-to-r from-sky-500/30 via-cyan-500/20 to-sky-400/25 opacity-60' 
+                  : 'bg-gradient-to-r from-sky-300/45 via-cyan-300/30 to-sky-200/40 opacity-70'
               }`}></div>
 
               {/* Monolith Container */}
@@ -215,8 +215,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                     onClick={() => setShowCssCard(!showCssCard)}
                     className={`flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono rounded-md border transition-colors cursor-pointer ${
                       isDark
-                        ? 'text-indigo-300 hover:text-white bg-indigo-500/10 hover:bg-indigo-500/20 border-indigo-500/20'
-                        : 'text-indigo-700 hover:text-indigo-950 bg-indigo-50 hover:bg-indigo-100 border-indigo-200 font-semibold'
+                        ? 'text-sky-300 hover:text-white bg-sky-500/10 hover:bg-sky-500/20 border-sky-500/20'
+                        : 'text-sky-700 hover:text-sky-950 bg-sky-50 hover:bg-sky-100 border-sky-200 font-semibold'
                     }`}
                     title="Toggle modern CSS design tokens"
                   >
@@ -243,7 +243,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                       <div className="absolute bottom-3 left-3 right-3 p-3 rounded-lg bg-black/80 backdrop-blur-md border border-white/[0.15] text-xs">
                         <div className="flex justify-between items-center text-slate-200">
                           <span className="font-semibold text-white">Gokul C</span>
-                          <span className="text-[11px] font-mono text-indigo-300">Hyderabad / India</span>
+                          <span className="text-[11px] font-mono text-sky-300">Hyderabad / India</span>
                         </div>
                         <p className="text-[11px] text-slate-300 mt-0.5">Frontend Engineer · React & Angular Specialist</p>
                       </div>
@@ -264,7 +264,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                 ) : (
                   /* Fashion CSS Inspector Card - Clean Dark Terminal */
                   <div className="aspect-4/5 rounded-xl p-4 bg-[#0B0F19] border border-white/[0.08] font-mono text-xs overflow-y-auto scrollbar-hidden space-y-3 text-slate-300">
-                    <div className="text-indigo-400 pb-1 border-b border-white/[0.08] flex items-center justify-between">
+                    <div className="text-sky-400 pb-1 border-b border-white/[0.08] flex items-center justify-between">
                       <span>/* Tailwind CSS v4 Design Tokens */</span>
                       <span className="text-[10px] text-slate-400">Light & Dark OKLCH</span>
                     </div>
@@ -274,7 +274,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                       <div className="pl-4 text-slate-400 space-y-0.5 my-1">
                         <div>backdrop-filter: <span className="text-amber-300">blur(16px)</span>;</div>
                         <div>background: <span className="text-emerald-300">rgba(14, 17, 26, 0.75)</span>;</div>
-                        <div>border: <span className="text-indigo-300">1px solid var(--border)</span>;</div>
+                        <div>border: <span className="text-sky-300">1px solid var(--border)</span>;</div>
                         <div>box-shadow: <span className="text-pink-300">0 20px 40px rgba(0,0,0,0.5)</span>;</div>
                       </div>
                       &#125;
@@ -285,7 +285,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                       <div className="pl-4 text-slate-400 space-y-0.5 my-1">
                         <div>font-family: <span className="text-amber-300">'Outfit', sans-serif</span>;</div>
                         <div>letter-spacing: <span className="text-emerald-300">-0.025em</span>;</div>
-                        <div>text-wrap: <span className="text-indigo-300">balance</span>;</div>
+                        <div>text-wrap: <span className="text-sky-300">balance</span>;</div>
                       </div>
                       &#125;
                     </div>

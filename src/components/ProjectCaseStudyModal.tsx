@@ -114,7 +114,7 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
         }`}>
           <div>
             <div className={`flex items-center gap-2 text-xs font-mono uppercase tracking-wider mb-1 font-semibold ${
-              isDark ? 'text-indigo-400' : 'text-indigo-600'
+              isDark ? 'text-sky-400' : 'text-sky-600'
             }`}>
               <span>{project.category}</span>
               <span aria-hidden="true">·</span>
@@ -153,12 +153,12 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
                 target.style.display = 'none';
                 const parent = target.parentElement;
                 if (parent) {
-                  parent.classList.add('flex', 'items-center', 'justify-center', 'bg-gradient-to-br', 'from-slate-900', 'to-indigo-950');
+                  parent.classList.add('flex', 'items-center', 'justify-center', 'bg-gradient-to-br', 'from-slate-900', 'to-sky-950');
                   const fb = document.createElement('div');
                   fb.className = 'text-center p-6 text-white';
                   fb.innerHTML = `
                     <div class="font-display font-bold text-xl mb-1">${project.title}</div>
-                    <div class="text-xs text-indigo-300 font-mono">Architecture Case Study</div>
+                    <div class="text-xs text-sky-300 font-mono">Architecture Case Study</div>
                   `;
                   parent.appendChild(fb);
                 }
@@ -212,7 +212,7 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
                 href={project.liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono font-semibold rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors shadow-sm"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-mono font-semibold rounded-lg bg-sky-600 text-white hover:bg-sky-500 transition-colors shadow-sm"
               >
                 <span>Live Deployment</span>
                 <ExternalLink className="w-3.5 h-3.5" />
@@ -253,16 +253,16 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
              ========================================================================= */}
           {project.id === 'developers-app' && (
             <div className={`p-5 rounded-2xl border space-y-4 ${
-              isDark ? 'bg-indigo-950/20 border-indigo-500/30' : 'bg-indigo-50/60 border-indigo-200'
+              isDark ? 'bg-sky-950/20 border-sky-500/30' : 'bg-sky-50/60 border-sky-200'
             }`}>
-              <div className="flex items-center justify-between pb-3 border-b border-indigo-500/20">
+              <div className="flex items-center justify-between pb-3 border-b border-sky-500/20">
                 <div className="flex items-center gap-2">
-                  <Terminal className="w-4 h-4 text-indigo-500" />
+                  <Terminal className="w-4 h-4 text-sky-500" />
                   <span className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>
                     Interactive DevHub Environment Scaffolder &amp; Daemon Matrix
                   </span>
                 </div>
-                <span className={`text-[11px] font-mono font-medium ${isDark ? 'text-indigo-300' : 'text-indigo-700'}`}>
+                <span className={`text-[11px] font-mono font-medium ${isDark ? 'text-sky-300' : 'text-sky-700'}`}>
                   Live Workspace Simulation
                 </span>
               </div>
@@ -282,7 +282,7 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
                       }}
                       className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-colors cursor-pointer ${
                         activeRuntime === stack
-                          ? 'bg-indigo-600 text-white shadow-md'
+                          ? 'bg-sky-600 text-white shadow-md'
                           : isDark
                             ? 'bg-white/[0.05] text-slate-400 hover:text-white'
                             : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-300'
@@ -417,7 +417,7 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
                 <div className={`p-3.5 rounded-xl border ${
                   isDark ? 'bg-black/40 border-white/[0.08]' : 'bg-white border-slate-200'
                 }`}>
-                  <div className="text-[11px] font-mono text-blue-500 font-semibold mb-1">50% Essential Needs</div>
+                  <div className="text-[11px] font-mono text-sky-500 font-semibold mb-1">50% Essential Needs</div>
                   <div className={`text-lg font-mono font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>
                     {mintCurrency.symbol}{Math.round(mintNeeds * mintCurrency.rate).toLocaleString()}
                   </div>
@@ -452,16 +452,16 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
           {/* INTERACTIVE SIMULATION 1: Role-Based Access Control (RBAC) Role Matrix Sandbox */}
           {(project.id === 'rbac-application' || project.id === 'vrv-security-rbac') && (
             <div className={`p-5 rounded-2xl border space-y-4 ${
-              isDark ? 'bg-indigo-950/20 border-indigo-500/30' : 'bg-indigo-50/60 border-indigo-200'
+              isDark ? 'bg-sky-950/20 border-sky-500/30' : 'bg-sky-50/60 border-sky-200'
             }`}>
-              <div className="flex items-center justify-between pb-3 border-b border-indigo-500/20">
+              <div className="flex items-center justify-between pb-3 border-b border-sky-500/20">
                 <div className="flex items-center gap-2">
-                  <Shield className="w-4 h-4 text-indigo-500" />
+                  <Shield className="w-4 h-4 text-sky-500" />
                   <span className={`text-sm font-semibold ${isDark ? 'text-white' : 'text-[#131B2E]'}`}>
                     Interactive RBAC Permission Sandbox
                   </span>
                 </div>
-                <span className={`text-[11px] font-mono font-medium ${isDark ? 'text-indigo-300' : 'text-indigo-700'}`}>
+                <span className={`text-[11px] font-mono font-medium ${isDark ? 'text-sky-300' : 'text-sky-700'}`}>
                   Live Client-Authoritative Engine
                 </span>
               </div>
@@ -474,7 +474,7 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
                     onClick={() => setSelectedRole(role)}
                     className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-colors cursor-pointer ${
                       selectedRole === role
-                        ? 'bg-indigo-600 text-white shadow-md'
+                        ? 'bg-sky-600 text-white shadow-md'
                         : isDark
                           ? 'bg-white/[0.05] text-slate-400 hover:text-white'
                           : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-300'
@@ -593,7 +593,7 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
                     isDark ? 'text-slate-400' : 'text-slate-600'
                   }`}>
                     <span>1-Year Projected Wealth Growth</span>
-                    <span className="text-indigo-600 dark:text-indigo-300 font-mono font-bold text-base tabular-nums">
+                    <span className="text-sky-600 dark:text-sky-300 font-mono font-bold text-base tabular-nums">
                       ${(calculatedSavings * 12).toLocaleString()}
                     </span>
                   </div>
@@ -665,9 +665,9 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
                       <span className="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
                       <span>Challenge: {cs.challenge}</span>
                     </div>
-                    <div className="text-xs flex items-start gap-2 pl-3.5 border-l border-indigo-500/40">
+                    <div className="text-xs flex items-start gap-2 pl-3.5 border-l border-sky-500/40">
                       <span className={isDark ? 'text-slate-300' : 'text-slate-700'}>
-                        <strong className="text-indigo-600 dark:text-indigo-400 font-semibold">Solution:</strong> {cs.solution}
+                        <strong className="text-sky-600 dark:text-sky-400 font-semibold">Solution:</strong> {cs.solution}
                       </span>
                     </div>
                   </div>
@@ -706,7 +706,7 @@ export const ProjectCaseStudyModal: React.FC<ProjectCaseStudyModalProps> = ({ pr
                 href={project.liveUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="px-5 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg transition-colors shadow-lg shadow-indigo-600/20"
+                className="px-5 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg transition-colors shadow-lg shadow-sky-600/20"
               >
                 Visit Production Site
               </a>

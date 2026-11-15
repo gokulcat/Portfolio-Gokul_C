@@ -35,7 +35,7 @@ export const SkillsSection: React.FC = () => {
 
   const getCategoryIcon = (title: string) => {
     switch (title) {
-      case 'Frontend Engineering': return <Code className="w-5 h-5 text-indigo-500" />;
+      case 'Frontend Engineering': return <Code className="w-5 h-5 text-sky-500" />;
       case 'UI/UX & Modern CSS': return <Palette className="w-5 h-5 text-pink-500" />;
       case 'Backend & Full-Stack Expansion': return <Server className="w-5 h-5 text-emerald-500" />;
       default: return <GitBranch className="w-5 h-5 text-amber-500" />;
@@ -52,7 +52,7 @@ export const SkillsSection: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <div className={`flex items-center gap-2 text-xs font-mono uppercase tracking-widest mb-2 font-semibold ${
-              isDark ? 'text-indigo-400' : 'text-indigo-600'
+              isDark ? 'text-sky-400' : 'text-sky-600'
             }`}>
               <span>Technical Capabilities</span>
               <span aria-hidden="true">·</span>
@@ -78,7 +78,7 @@ export const SkillsSection: React.FC = () => {
                 }`}
               >
                 <div className="flex items-center gap-2">
-                  <Filter className="w-3.5 h-3.5 text-indigo-500" />
+                  <Filter className="w-3.5 h-3.5 text-sky-500" />
                   <span className="truncate">{currentCategoryLabel}</span>
                 </div>
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${
@@ -106,7 +106,7 @@ export const SkillsSection: React.FC = () => {
                       }}
                       className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                         selectedFilter === cat.id
-                          ? 'bg-indigo-600 text-white font-semibold'
+                          ? 'bg-sky-600 text-white font-semibold'
                           : isDark
                             ? 'text-slate-300 hover:text-white hover:bg-white/[0.06]'
                             : 'text-slate-700 hover:text-slate-950 hover:bg-slate-100'
@@ -132,7 +132,7 @@ export const SkillsSection: React.FC = () => {
                   onClick={() => setSelectedFilter(cat.id)}
                   className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all duration-200 whitespace-nowrap cursor-pointer ${
                     selectedFilter === cat.id
-                      ? 'bg-indigo-600 text-white shadow-md font-semibold'
+                      ? 'bg-sky-600 text-white shadow-md font-semibold'
                       : isDark 
                         ? 'text-slate-400 hover:text-white hover:bg-white/[0.04]' 
                         : 'text-slate-700 hover:text-[#131B2E] hover:bg-white/80'
@@ -157,7 +157,7 @@ export const SkillsSection: React.FC = () => {
               <div>
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`p-2.5 rounded-xl border ${
-                    isDark ? 'bg-white/[0.05] border-white/[0.08]' : 'bg-indigo-50 border-indigo-100'
+                    isDark ? 'bg-white/[0.05] border-white/[0.08]' : 'bg-sky-50 border-sky-100'
                   }`}>
                     {getCategoryIcon(category.title)}
                   </div>
@@ -181,7 +181,7 @@ export const SkillsSection: React.FC = () => {
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
-                        <span className={`w-1.5 h-1.5 rounded-full ${isDark ? 'bg-indigo-500' : 'bg-indigo-600'}`}></span>
+                        <span className={`w-1.5 h-1.5 rounded-full ${isDark ? 'bg-sky-500' : 'bg-sky-600'}`}></span>
                         <span className={`text-sm font-medium ${isDark ? 'text-slate-200 group-hover:text-white' : 'text-slate-800 group-hover:text-black'}`}>
                           {skill.name}
                         </span>
