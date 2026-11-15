@@ -158,7 +158,7 @@ export const PORTFOLIO_DATA = {
       subtitle: "Wealth Management Application !",
       overview: "WealthWise is a comprehensive financial management platform designed to empower individuals and families to take control of their finances effectively. It provides users with tools to set financial goals, track expenses, manage budgets, and gain insights into their financial health—all in one centralized platform.",
       extendedOverview: "WealthWise is tailored to simplify money management while helping users make informed decisions to achieve their financial aspirations. By combining powerful calculation tools with an intuitive design, it empowers users to make smarter financial decisions, achieve their goals, and ultimately lead a more financially secure life.",
-      image: "/assets/project_3.png",
+      image: "/assets/aistudio/image_d59a3166.png",
       liveUrl: "https://wealth-path.vercel.app/",
       codeUrl: "https://github.com/gokulcat/WealthPath",
       tools: ["HTML", "CSS", "JavaScript", "React", "Tailwind", "GIT"],
