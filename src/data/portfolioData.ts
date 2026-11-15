@@ -265,26 +265,19 @@ export const PORTFOLIO_DATA = {
 
   experienceTimeline: [
     {
-      period: "2022 — Present",
+      period: "2021 — Present",
       role: "Frontend Engineer (React & Angular Specialist)",
-      company: "Web & Enterprise Software Solutions",
-      summary: "Designing and developing production React and Angular web applications with a relentless focus on reactive state management, performance, and component modularity.",
+      company: "Enterprise & Product Engineering",
+      summary: "Engineering production web applications and creating responsive, pixel-perfect UIs in React and Angular directly from Figma prototypes—with a strong focus on component modularity, reactive state management, and sub-second runtime performance.",
       highlights: [
-        "Architected scalable UI modules across React and Angular frameworks serving enterprise clients",
-        "Implemented reactive RxJS streams and state management pipelines for dynamic data flows",
-        "Ensured seamless design-to-code handoffs collaborating closely with Figma UI/UX designers",
-        "Optimized client-side bundles, runtime rendering performance, and sub-second page loads"
-      ]
-    },
-    {
-      period: "2020 — 2022",
-      role: "Frontend & UI Engineer",
-      company: "Digital Studio & Freelance",
-      summary: "Crafted dynamic client portfolios, interactive web interfaces, and responsive component systems using JavaScript, TypeScript, HTML5, and SASS/CSS.",
-      highlights: [
-        "Built modular SCSS architecture and responsive layouts across cross-device viewports",
-        "Developed custom interactive widgets and client showcase spaces",
-        "Delivered pixel-perfect layouts from design mockups ahead of deadlines"
+        "Created numerous production UIs, design systems, and reusable component libraries in React and Angular directly from Figma specifications",
+        "Architected scalable frontend modules serving enterprise dashboards, FinTech workflows, and role-based access consoles",
+        "Implemented reactive RxJS streams alongside Redux and NgRx state pipelines for predictable, real-time data flows",
+        "Collaborated closely with UX designers to translate interactive Figma prototypes into accessible, responsive cross-browser interfaces",
+        "Integrated RESTful APIs and asynchronous data-fetching layers with TypeScript contracts and defensive error handling",
+        "Built modular CSS3, Tailwind CSS, and SASS/SCSS styling architectures with consistent Light & Dark theming",
+        "Optimized client-side bundles, lazy-loaded routes, and rendering pipelines to achieve fast initial loads and smooth interactions",
+        "Maintained high code quality through unit/integration testing, peer code reviews, and Agile sprint delivery"
       ]
     }
   ],

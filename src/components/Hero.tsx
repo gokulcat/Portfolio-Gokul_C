@@ -265,7 +265,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onExploreProjects }) =
                   /* Fashion CSS Inspector Card - Clean Dark Terminal */
                   <div className="aspect-4/5 rounded-xl p-4 bg-[#0B0F19] border border-white/[0.08] font-mono text-xs overflow-y-auto scrollbar-hidden space-y-3 text-slate-300">
                     <div className="text-indigo-400 pb-1 border-b border-white/[0.08] flex items-center justify-between">
-                      <span>/* Modern Fashion CSS Tokens */</span>
+                      <span>/* Tailwind CSS v4 Design Tokens */</span>
                       <span className="text-[10px] text-slate-400">Light & Dark OKLCH</span>
                     </div>
 
